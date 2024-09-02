@@ -1,0 +1,84 @@
+apiVersion: v1
+entries:
+  cert-manager:
+  - annotations:
+      category: CertificateAuthority
+      images: |
+        - name: acmesolver
+          image: docker.io/bitnami/acmesolver:1.13.2-debian-11-r1
+        - name: cainjector
+          image: docker.io/bitnami/cainjector:1.13.2-debian-11-r1
+        - name: cert-manager-webhook
+          image: docker.io/bitnami/cert-manager-webhook:1.13.2-debian-11-r1
+        - name: cert-manager
+          image: docker.io/bitnami/cert-manager:1.13.2-debian-11-r1
+      licenses: Apache-2.0
+    apiVersion: v2
+    appVersion: 1.13.2
+    created: "2024-09-02T18:12:27.697108+09:00"
+    dependencies:
+    - name: common
+      repository: oci://registry-1.docker.io/bitnamicharts
+      tags:
+      - bitnami-common
+      version: 2.x.x
+    description: cert-manager is a Kubernetes add-on to automate the management and
+      issuance of TLS certificates from various issuing sources.
+    digest: 000b3e904e47b924732a46fad576c17a0e82997baa89e2275584e64b8768e49b
+    home: https://bitnami.com
+    icon: https://bitnami.com/assets/stacks/cert-manager/img/cert-manager-stack-220x234.png
+    keywords:
+    - go
+    - security
+    - tls
+    - certificate
+    maintainers:
+    - name: VMware, Inc.
+      url: https://github.com/bitnami/charts
+    name: cert-manager
+    sources:
+    - https://github.com/bitnami/charts/tree/main/bitnami/cert-manager
+    urls:
+    - cert-manager-0.13.3.tgz
+    version: 0.13.3
+  keycloak:
+  - annotations:
+      category: DeveloperTools
+      images: |
+        - name: keycloak-config-cli
+          image: docker.io/bitnami/keycloak-config-cli:5.9.0-debian-11-r0
+        - name: keycloak
+          image: docker.io/bitnami/keycloak:22.0.5-debian-11-r0
+      licenses: Apache-2.0
+    apiVersion: v2
+    appVersion: 22.0.5
+    created: "2024-09-02T18:12:27.70223+09:00"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: oci://registry-1.docker.io/bitnamicharts
+      version: 13.x.x
+    - name: common
+      repository: oci://registry-1.docker.io/bitnamicharts
+      tags:
+      - bitnami-common
+      version: 2.x.x
+    description: Keycloak is a high performance Java-based identity and access management
+      solution. It lets developers add an authentication layer to their applications
+      with minimum effort.
+    digest: ab05a6fe82c46a21ae10c0d2cbb5f2b89abdabf339aebe8b10311b79070ab64c
+    home: https://bitnami.com
+    icon: https://bitnami.com/assets/stacks/keycloak/img/keycloak-stack-220x234.png
+    keywords:
+    - keycloak
+    - access-management
+    maintainers:
+    - name: VMware, Inc.
+      url: https://github.com/bitnami/charts
+    name: keycloak
+    sources:
+    - https://github.com/bitnami/charts/tree/main/bitnami/keycloak
+    urls:
+    - keycloak-17.3.1.tgz
+    version: 17.3.1
+generated: "2024-09-02T18:12:27.693983+09:00"

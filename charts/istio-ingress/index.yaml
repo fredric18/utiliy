@@ -1,0 +1,20 @@
+apiVersion: v1
+entries:
+  gateway:
+  - apiVersion: v2
+    appVersion: 1.21.0
+    created: "2024-09-02T18:13:29.790846+09:00"
+    description: Helm chart for deploying Istio gateways
+    digest: ff7c7f59a790cc849a6d45a9db60ca41d09c5852ac63c88753ba32af486f3096
+    icon: https://istio.io/latest/favicons/android-192x192.png
+    keywords:
+    - istio
+    - gateways
+    name: gateway
+    sources:
+    - https://github.com/istio/istio
+    type: application
+    urls:
+    - gateway-1.21.0.tgz
+    version: 1.21.0
+generated: "2024-09-02T18:13:29.790085+09:00"
