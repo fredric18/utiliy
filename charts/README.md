@@ -70,6 +70,8 @@
   "version": "16.1.2"
 }
 ```
+
+
 ### apache 
 
  > ```json
@@ -126,6 +128,8 @@
   "version": "10.2.1"
 }
 ```
+
+
 ### argo-cd 
 
  > ```json
@@ -188,6 +192,8 @@
   "version": "6.0.9"
 }
 ```
+
+
 ### aws-mountpoint-s3-csi-driver 
 
  > ```json
@@ -220,6 +226,8 @@
   "version": "1.5.1"
 }
 ```
+
+
 ### base 
 
  > ```json
@@ -243,6 +251,8 @@
   "version": "1.21.0"
 }
 ```
+
+
 ### cassandra 
 
  > ```json
@@ -296,6 +306,8 @@
   "version": "10.12.1"
 }
 ```
+
+
 ### cert-manager 
 
  > ```json
@@ -352,6 +364,8 @@
   "version": "0.13.3"
 }
 ```
+
+
 ### chartmuseum 
 
  > ```json
@@ -386,6 +400,8 @@
   "version": "3.10.2"
 }
 ```
+
+
 ### docker-mailserver 
 
  > ```json
@@ -424,6 +440,8 @@
   "version": "3.0.10"
 }
 ```
+
+
 ### fluentd 
 
  > ```json
@@ -475,6 +493,8 @@
   "version": "5.9.8"
 }
 ```
+
+
 ### gateway 
 
  > ```json
@@ -500,6 +520,8 @@
   "version": "1.21.0"
 }
 ```
+
+
 ### harbor 
 
  > ```json
@@ -580,6 +602,8 @@
   "version": "19.1.1"
 }
 ```
+
+
 ### infisical-standalone 
 
  > ```json
@@ -617,6 +641,8 @@
   "version": "1.0.8"
 }
 ```
+
+
 ### istiod 
 
  > ```json
@@ -642,6 +668,8 @@
   "version": "1.21.0"
 }
 ```
+
+
 ### jaeger-operator 
 
  > ```json
@@ -673,6 +701,8 @@
   "version": "2.53.0"
 }
 ```
+
+
 ### jenkins 
 
  > ```json
@@ -729,6 +759,8 @@
   "version": "12.4.2"
 }
 ```
+
+
 ### kafka 
 
  > ```json
@@ -794,6 +826,8 @@
   "version": "26.4.0"
 }
 ```
+
+
 ### keycloak 
 
  > ```json
@@ -850,6 +884,8 @@
   "version": "17.3.1"
 }
 ```
+
+
 ### kiali-server 
 
  > ```json
@@ -884,6 +920,8 @@
   "version": "1.82.0"
 }
 ```
+
+
 ### kibana 
 
  > ```json
@@ -937,6 +975,8 @@
   "version": "10.6.1"
 }
 ```
+
+
 ### kube-prometheus-stack 
 
  > ```json
@@ -1041,6 +1081,8 @@
   "version": "58.3.1"
 }
 ```
+
+
 ### mariadb 
 
  > ```json
@@ -1096,6 +1138,8 @@
   "version": "16.5.0"
 }
 ```
+
+
 ### minecraft 
 
  > ```json
@@ -1145,6 +1189,8 @@
   "version": "4.15.0"
 }
 ```
+
+
 ### minio 
 
  > ```json
@@ -1200,6 +1246,8 @@
   "version": "12.9.4"
 }
 ```
+
+
 ### nexus-repository-manager 
 
  > ```json
@@ -1235,6 +1283,8 @@
   "version": "64.2.0"
 }
 ```
+
+
 ### nginx-ingress-controller 
 
  > ```json
@@ -1290,6 +1340,8 @@
   "version": "10.7.0"
 }
 ```
+
+
 ### palworld 
 
  > ```json
@@ -1344,6 +1396,8 @@
   "version": "0.1.0"
 }
 ```
+
+
 ### postgresql 
 
  > ```json
@@ -1400,6 +1454,8 @@
   "version": "13.2.23"
 }
 ```
+
+
 ### redis 
 
  > ```json
@@ -1457,6 +1513,8 @@
   "version": "19.0.1"
 }
 ```
+
+
 ### sonarqube 
 
  > ```json
@@ -1517,6 +1575,8 @@
   "version": "4.1.1"
 }
 ```
+
+
 ### tensorflow-resnet 
 
  > ```json
@@ -1571,3 +1631,5 @@
   "version": "3.10.2"
 }
 ```
+
+
