@@ -10,4 +10,4 @@
 [https://utils.fredric18.online/charts/index.yaml](https://utils.fredric18.online/charts/index.yaml)
 
 ### image assets
-`./assets`
+[https://utils.fredric18.online/assets/images](https://utils.fredric18.online/assets/images)
