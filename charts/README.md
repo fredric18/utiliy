@@ -1,6 +1,6 @@
 ### airflow 
 
- > ```json
+```json
 {
   "annotations": {
     "category": "WorkFlow",
@@ -74,7 +74,7 @@
 
 ### apache 
 
- > ```json
+```json
 {
   "annotations": {
     "category": "Infrastructure",
@@ -132,7 +132,7 @@
 
 ### argo-cd 
 
- > ```json
+```json
 {
   "annotations": {
     "category": "Infrastructure",
@@ -196,7 +196,7 @@
 
 ### aws-mountpoint-s3-csi-driver 
 
- > ```json
+```json
 {
   "apiVersion": "v2",
   "created": "2024-09-02T18:36:11.266007+09:00",
@@ -230,7 +230,7 @@
 
 ### base 
 
- > ```json
+```json
 {
   "apiVersion": "v1",
   "appVersion": "1.21.0",
@@ -255,7 +255,7 @@
 
 ### cassandra 
 
- > ```json
+```json
 {
   "annotations": {
     "category": "Database",
@@ -310,7 +310,7 @@
 
 ### cert-manager 
 
- > ```json
+```json
 {
   "annotations": {
     "category": "CertificateAuthority",
@@ -368,7 +368,7 @@
 
 ### chartmuseum 
 
- > ```json
+```json
 {
   "apiVersion": "v2",
   "appVersion": "0.16.1",
@@ -404,7 +404,7 @@
 
 ### docker-mailserver 
 
- > ```json
+```json
 {
   "annotations": {
     "artifacthub.io/changes": "- Breaking : Standardized app labels to app.kubernetes.io/name for Istio workload/Cilium compatibility
@@ -444,7 +444,7 @@
 
 ### fluentd 
 
- > ```json
+```json
 {
   "annotations": {
     "category": "Analytics",
@@ -497,7 +497,7 @@
 
 ### gateway 
 
- > ```json
+```json
 {
   "apiVersion": "v2",
   "appVersion": "1.21.0",
@@ -524,7 +524,7 @@
 
 ### harbor 
 
- > ```json
+```json
 {
   "annotations": {
     "category": "Infrastructure",
@@ -606,7 +606,7 @@
 
 ### infisical-standalone 
 
- > ```json
+```json
 {
   "apiVersion": "v2",
   "appVersion": "1.0.1",
@@ -645,7 +645,7 @@
 
 ### istiod 
 
- > ```json
+```json
 {
   "apiVersion": "v1",
   "appVersion": "1.21.0",
@@ -672,7 +672,7 @@
 
 ### jaeger-operator 
 
- > ```json
+```json
 {
   "apiVersion": "v1",
   "appVersion": "1.52.0",
@@ -705,7 +705,7 @@
 
 ### jenkins 
 
- > ```json
+```json
 {
   "annotations": {
     "category": "Infrastructure",
@@ -763,7 +763,7 @@
 
 ### kafka 
 
- > ```json
+```json
 {
   "annotations": {
     "category": "Infrastructure",
@@ -830,7 +830,7 @@
 
 ### keycloak 
 
- > ```json
+```json
 {
   "annotations": {
     "category": "DeveloperTools",
@@ -888,7 +888,7 @@
 
 ### kiali-server 
 
- > ```json
+```json
 {
   "apiVersion": "v2",
   "appVersion": "v1.82.0",
@@ -924,7 +924,7 @@
 
 ### kibana 
 
- > ```json
+```json
 {
   "annotations": {
     "category": "Analytics",
@@ -979,7 +979,7 @@
 
 ### kube-prometheus-stack 
 
- > ```json
+```json
 {
   "annotations": {
     "artifacthub.io/license": "Apache-2.0",
@@ -1085,7 +1085,7 @@
 
 ### mariadb 
 
- > ```json
+```json
 {
   "annotations": {
     "category": "Database",
@@ -1142,7 +1142,7 @@
 
 ### minecraft 
 
- > ```json
+```json
 {
   "annotations": {
     "artifacthub.io/links": "- name: Image source
@@ -1193,7 +1193,7 @@
 
 ### minio 
 
- > ```json
+```json
 {
   "annotations": {
     "category": "Infrastructure",
@@ -1250,7 +1250,7 @@
 
 ### nexus-repository-manager 
 
- > ```json
+```json
 {
   "apiVersion": "v2",
   "appVersion": "3.64.0",
@@ -1287,7 +1287,7 @@
 
 ### nginx-ingress-controller 
 
- > ```json
+```json
 {
   "annotations": {
     "category": "Infrastructure",
@@ -1344,7 +1344,7 @@
 
 ### palworld 
 
- > ```json
+```json
 {
   "annotations": {
     "artifacthub.io/alternativeName": "palworld-server",
@@ -1400,7 +1400,7 @@
 
 ### postgresql 
 
- > ```json
+```json
 {
   "annotations": {
     "category": "Database",
@@ -1458,7 +1458,7 @@
 
 ### redis 
 
- > ```json
+```json
 {
   "annotations": {
     "category": "Database",
@@ -1517,7 +1517,7 @@
 
 ### sonarqube 
 
- > ```json
+```json
 {
   "annotations": {
     "category": "DeveloperTools",
@@ -1579,7 +1579,7 @@
 
 ### tensorflow-resnet 
 
- > ```json
+```json
 {
   "annotations": {
     "category": "MachineLearning",
