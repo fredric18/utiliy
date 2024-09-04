@@ -13,5 +13,5 @@ permalink: /about/
 - [fredric18](https://github.com/fredric18) / [utils](https://github.com/fredric18/utils)
 
 #### Service and Documentation
-- [Documentation](https://docs.fredric18.online)
-- [Fredric18](https://www.fredric18.online)
+- [Fredric18 Online](https://www.fredric18.online)
+- [Fredric18 Documentation](https://docs.fredric18.online)
