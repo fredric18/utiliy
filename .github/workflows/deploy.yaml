@@ -12,14 +12,6 @@ on:
       - main  # main 브랜치에 대한 pull request가 있을 때 실행
 
 jobs:
-name: Update content
-
-on:
-  push:
-    branches:
-      - main
-
-jobs:
   update-content:
     runs-on: ubuntu-latest
     steps:
