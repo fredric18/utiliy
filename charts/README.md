@@ -1,10 +1,11 @@
 ---
 layout: page
 title: Helm Chart Repository
-permalink: /charts/
+permalink: /charts
+toc: true
 ---
 
-{:toc}
+{{ toc }}
 
 ### airflow 
 
