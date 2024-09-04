@@ -1,4 +1,9 @@
-## Helm Chart Repository
+---
+layout: page
+title: About
+Helm Chart Repository
+permalink: /charts
+---
 ### airflow 
 
 ```yaml
