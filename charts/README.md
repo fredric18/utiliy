@@ -1,7 +1,6 @@
 ---
 layout: page
-title: About
-Helm Chart Repository
+title: Helm Chart Repository
 permalink: /charts
 ---
 ### airflow 
