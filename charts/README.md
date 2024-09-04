@@ -1,13 +1,15 @@
 ---
 layout: page
 title: Helm Chart Repository
-permalink: /charts
+permalink: /charts/
 toc: true
 ---
-
-{{ toc }}
-
-### airflow 
+### Add Repository
+```bash
+helm repo add fredric18 https://utils.fredric18.online/charts
+```
+### Chart List
+#### airflow 
 
 ```yaml
 annotations:
@@ -64,7 +66,7 @@ version: 16.1.2
 ```
 
 
-### apache 
+#### apache 
 
 ```yaml
 annotations:
@@ -109,7 +111,7 @@ version: 10.2.1
 ```
 
 
-### argo-cd 
+#### argo-cd 
 
 ```yaml
 annotations:
@@ -158,7 +160,7 @@ version: 6.0.9
 ```
 
 
-### aws-mountpoint-s3-csi-driver 
+#### aws-mountpoint-s3-csi-driver 
 
 ```yaml
 apiVersion: v2
@@ -184,7 +186,7 @@ version: 1.5.1
 ```
 
 
-### base 
+#### base 
 
 ```yaml
 apiVersion: v1
@@ -204,7 +206,7 @@ version: 1.21.0
 ```
 
 
-### cassandra 
+#### cassandra 
 
 ```yaml
 annotations:
@@ -246,7 +248,7 @@ version: 10.12.1
 ```
 
 
-### cert-manager 
+#### cert-manager 
 
 ```yaml
 annotations:
@@ -291,7 +293,7 @@ version: 0.13.3
 ```
 
 
-### chartmuseum 
+#### chartmuseum 
 
 ```yaml
 apiVersion: v2
@@ -319,7 +321,7 @@ version: 3.10.2
 ```
 
 
-### docker-mailserver 
+#### docker-mailserver 
 
 ```yaml
 annotations:
@@ -350,7 +352,7 @@ version: 3.0.10
 ```
 
 
-### fluentd 
+#### fluentd 
 
 ```yaml
 annotations:
@@ -390,7 +392,7 @@ version: 5.9.8
 ```
 
 
-### gateway 
+#### gateway 
 
 ```yaml
 apiVersion: v2
@@ -412,7 +414,7 @@ version: 1.21.0
 ```
 
 
-### harbor 
+#### harbor 
 
 ```yaml
 annotations:
@@ -477,7 +479,7 @@ version: 19.1.1
 ```
 
 
-### infisical-standalone 
+#### infisical-standalone 
 
 ```yaml
 apiVersion: v2
@@ -506,7 +508,7 @@ version: 1.0.8
 ```
 
 
-### istiod 
+#### istiod 
 
 ```yaml
 apiVersion: v1
@@ -528,7 +530,7 @@ version: 1.21.0
 ```
 
 
-### jaeger-operator 
+#### jaeger-operator 
 
 ```yaml
 apiVersion: v1
@@ -552,7 +554,7 @@ version: 2.53.0
 ```
 
 
-### jenkins 
+#### jenkins 
 
 ```yaml
 annotations:
@@ -597,7 +599,7 @@ version: 12.4.2
 ```
 
 
-### kafka 
+#### kafka 
 
 ```yaml
 annotations:
@@ -649,7 +651,7 @@ version: 26.4.0
 ```
 
 
-### keycloak 
+#### keycloak 
 
 ```yaml
 annotations:
@@ -692,7 +694,7 @@ version: 17.3.1
 ```
 
 
-### kiali-server 
+#### kiali-server 
 
 ```yaml
 apiVersion: v2
@@ -720,7 +722,7 @@ version: 1.82.0
 ```
 
 
-### kibana 
+#### kibana 
 
 ```yaml
 annotations:
@@ -762,7 +764,7 @@ version: 10.6.1
 ```
 
 
-### kube-prometheus-stack 
+#### kube-prometheus-stack 
 
 ```yaml
 annotations:
@@ -834,7 +836,7 @@ version: 58.3.1
 ```
 
 
-### mariadb 
+#### mariadb 
 
 ```yaml
 annotations:
@@ -878,7 +880,7 @@ version: 16.5.0
 ```
 
 
-### minecraft 
+#### minecraft 
 
 ```yaml
 annotations:
@@ -914,7 +916,7 @@ version: 4.15.0
 ```
 
 
-### minio 
+#### minio 
 
 ```yaml
 annotations:
@@ -958,7 +960,7 @@ version: 12.9.4
 ```
 
 
-### nexus-repository-manager 
+#### nexus-repository-manager 
 
 ```yaml
 apiVersion: v2
@@ -990,7 +992,7 @@ version: 64.2.0
 ```
 
 
-### nginx-ingress-controller 
+#### nginx-ingress-controller 
 
 ```yaml
 annotations:
@@ -1034,7 +1036,7 @@ version: 10.7.0
 ```
 
 
-### palworld 
+#### palworld 
 
 ```yaml
 annotations:
@@ -1079,7 +1081,7 @@ version: 0.1.0
 ```
 
 
-### postgresql 
+#### postgresql 
 
 ```yaml
 annotations:
@@ -1124,7 +1126,7 @@ version: 13.2.23
 ```
 
 
-### redis 
+#### redis 
 
 ```yaml
 annotations:
@@ -1170,7 +1172,7 @@ version: 19.0.1
 ```
 
 
-### sonarqube 
+#### sonarqube 
 
 ```yaml
 annotations:
@@ -1217,7 +1219,7 @@ version: 4.1.1
 ```
 
 
-### tensorflow-resnet 
+#### tensorflow-resnet 
 
 ```yaml
 annotations:
