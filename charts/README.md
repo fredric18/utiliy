@@ -1,8 +1,11 @@
 ---
 layout: page
 title: Helm Chart Repository
-permalink: /charts
+permalink: /charts/
 ---
+
+{:toc}
+
 ### airflow 
 
 ```yaml
