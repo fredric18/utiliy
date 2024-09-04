@@ -1,11 +1,11 @@
 ---
 layout: page
-title: Helm Chart Repository
+title: Charts
 permalink: /charts/
 toc: true
 ---
-### Add Repository
-```bash
+### Adding Repository
+```shell
 helm repo add fredric18 https://utils.fredric18.online/charts
 ```
 ### Chart List

@@ -4,13 +4,13 @@ title: About
 permalink: /about/
 ---
 
-#### Powered by Github
-[fredric18](https://github.com/fredric18) /
-[utils](https://github.com/fredric18/utils)
+### Fredric's Utilities
+<p align="center">
+	<img src="https://utils.fredric18.online/assets/images/fredric18/png/fredric-icon-opacity.png" width="300px" height="300px">
+</p>
 
-#### Utils
-- [Chart Repository](https://utils.fredric18.online/charts)
-- [Assets](https://utils.fredric18.online/assets)
+#### Powered by Github
+- [fredric18](https://github.com/fredric18) / [utils](https://github.com/fredric18/utils)
 
 #### Service and Documentation
 - [Documentation](https://docs.fredric18.online)
