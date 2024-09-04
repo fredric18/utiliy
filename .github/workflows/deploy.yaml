@@ -19,7 +19,7 @@ jobs:
     - name: Run custom bash script
       run: |
         ls -al
-	pwd -p
+        pwd -p
         chmod +x ./charts/generate-README.sh  # 실행 권한 부여
         ./charts/generate-README.sh
 
