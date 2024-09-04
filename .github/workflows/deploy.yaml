@@ -31,7 +31,7 @@ jobs:
     - name: Commit changes
       run: |
         git add -A
-        git commit -m "[Action/bot] Re-generate README.md"
+        git commit -m "[Action/bot] Re-generate README.md" || echo "No changes to commit"
     
     - name: Push changes
       env:
