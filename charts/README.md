@@ -1,7 +1,18 @@
----\nlayout: page\ntitle: Charts\npermalink: /charts/\ntoc: true\n---
-### Adding Repository\n```shell\nhelm repo add fredric18 https://utils.fredric18.online/charts\n```
+---
+layout: page
+title: Charts
+permalink: /charts/
+toc: true
+---
+### Adding Repository
+```shell
+helm repo add fredric18 https://utils.fredric18.online/charts
+```
 ### Chart List
-#### airflow \n\n```yaml\nannotations:
+#### airflow 
+
+```yaml
+annotations:
   category: WorkFlow
   images: |
     - name: airflow-exporter
@@ -51,8 +62,13 @@ sources:
   - https://github.com/bitnami/charts/tree/main/bitnami/airflow
 urls:
   - airflow-16.1.2.tgz
-version: 16.1.2\n```\n\n
-#### apache \n\n```yaml\nannotations:
+version: 16.1.2
+```
+
+#### apache 
+
+```yaml
+annotations:
   category: Infrastructure
   images: |
     - name: apache-exporter
@@ -90,8 +106,13 @@ sources:
   - https://github.com/bitnami/charts/tree/main/bitnami/apache
 urls:
   - apache-10.2.1.tgz
-version: 10.2.1\n```\n\n
-#### argo-cd \n\n```yaml\nannotations:
+version: 10.2.1
+```
+
+#### argo-cd 
+
+```yaml
+annotations:
   category: Infrastructure
   images: |
     - name: argo-cd
@@ -133,8 +154,13 @@ sources:
   - https://github.com/bitnami/charts/tree/main/bitnami/argo-cd
 urls:
   - argo-cd-6.0.9.tgz
-version: 6.0.9\n```\n\n
-#### aws-mountpoint-s3-csi-driver \n\n```yaml\napiVersion: v2
+version: 6.0.9
+```
+
+#### aws-mountpoint-s3-csi-driver 
+
+```yaml
+apiVersion: v2
 created: "2024-09-02T18:36:11.266007+09:00"
 description: A Helm chart for installing the Mountpoint for Amazon S3 CSI Driver. This CSI driver allows your Kubernetes applications to access S3 objects through a file system interface.
 digest: 7bd84a74b3ea5d5558435b797ce9f936b589f7bc37fa7804df33f7c56f196e5e
@@ -153,8 +179,13 @@ sources:
   - https://github.com/awslabs/mountpoint-s3-csi-driver
 urls:
   - aws-mountpoint-s3-csi-driver-1.5.1.tgz
-version: 1.5.1\n```\n\n
-#### base \n\n```yaml\napiVersion: v1
+version: 1.5.1
+```
+
+#### base 
+
+```yaml
+apiVersion: v1
 appVersion: 1.21.0
 created: "2024-09-02T18:36:11.267536+09:00"
 description: Helm chart for deploying Istio cluster resources and CRDs
@@ -167,8 +198,13 @@ sources:
   - https://github.com/istio/istio
 urls:
   - base-1.21.0.tgz
-version: 1.21.0\n```\n\n
-#### cassandra \n\n```yaml\nannotations:
+version: 1.21.0
+```
+
+#### cassandra 
+
+```yaml
+annotations:
   category: Database
   images: |
     - name: cassandra
@@ -203,8 +239,13 @@ sources:
   - https://github.com/bitnami/charts/tree/main/bitnami/cassandra
 urls:
   - cassandra-10.12.1.tgz
-version: 10.12.1\n```\n\n
-#### cert-manager \n\n```yaml\nannotations:
+version: 10.12.1
+```
+
+#### cert-manager 
+
+```yaml
+annotations:
   category: CertificateAuthority
   images: |
     - name: acmesolver
@@ -242,8 +283,13 @@ sources:
   - https://github.com/bitnami/charts/tree/main/bitnami/cert-manager
 urls:
   - cert-manager-0.13.3.tgz
-version: 0.13.3\n```\n\n
-#### chartmuseum \n\n```yaml\napiVersion: v2
+version: 0.13.3
+```
+
+#### chartmuseum 
+
+```yaml
+apiVersion: v2
 appVersion: 0.16.1
 created: "2024-09-02T18:36:11.274458+09:00"
 description: Host your own Helm Chart Repository
@@ -264,8 +310,13 @@ sources:
   - https://github.com/helm/chartmuseum
 urls:
   - chartmuseum-3.10.2.tgz
-version: 3.10.2\n```\n\n
-#### docker-mailserver \n\n```yaml\nannotations:
+version: 3.10.2
+```
+
+#### docker-mailserver 
+
+```yaml
+annotations:
   artifacthub.io/changes: |
     - Breaking : Standardized app labels to app.kubernetes.io/name for Istio workload/Cilium compatibility
 apiVersion: v2
@@ -289,8 +340,13 @@ sources:
   - https://github.com/docker-mailserver/docker-mailserver-helm
 urls:
   - docker-mailserver-3.0.10.tgz
-version: 3.0.10\n```\n\n
-#### fluentd \n\n```yaml\nannotations:
+version: 3.0.10
+```
+
+#### fluentd 
+
+```yaml
+annotations:
   category: Analytics
   images: |
     - name: fluentd
@@ -323,8 +379,13 @@ sources:
   - https://github.com/bitnami/charts/tree/main/bitnami/fluentd
 urls:
   - fluentd-5.9.8.tgz
-version: 5.9.8\n```\n\n
-#### gateway \n\n```yaml\napiVersion: v2
+version: 5.9.8
+```
+
+#### gateway 
+
+```yaml
+apiVersion: v2
 appVersion: 1.21.0
 created: "2024-09-02T18:36:11.278923+09:00"
 description: Helm chart for deploying Istio gateways
@@ -339,8 +400,13 @@ sources:
 type: application
 urls:
   - gateway-1.21.0.tgz
-version: 1.21.0\n```\n\n
-#### harbor \n\n```yaml\nannotations:
+version: 1.21.0
+```
+
+#### harbor 
+
+```yaml
+annotations:
   category: Infrastructure
   images: |
     - name: harbor-adapter-trivy
@@ -398,8 +464,13 @@ sources:
   - https://github.com/bitnami/charts/tree/main/bitnami/harbor
 urls:
   - harbor-19.1.1.tgz
-version: 19.1.1\n```\n\n
-#### infisical-standalone \n\n```yaml\napiVersion: v2
+version: 19.1.1
+```
+
+#### infisical-standalone 
+
+```yaml
+apiVersion: v2
 appVersion: 1.0.1
 created: "2024-09-02T18:36:11.297781+09:00"
 dependencies:
@@ -421,8 +492,13 @@ name: infisical-standalone
 type: application
 urls:
   - infisical-standalone-1.0.8.tgz
-version: 1.0.8\n```\n\n
-#### istiod \n\n```yaml\napiVersion: v1
+version: 1.0.8
+```
+
+#### istiod 
+
+```yaml
+apiVersion: v1
 appVersion: 1.21.0
 created: "2024-09-02T18:36:11.299221+09:00"
 description: Helm chart for istio control plane
@@ -437,8 +513,13 @@ sources:
   - https://github.com/istio/istio
 urls:
   - istiod-1.21.0.tgz
-version: 1.21.0\n```\n\n
-#### jaeger-operator \n\n```yaml\napiVersion: v1
+version: 1.21.0
+```
+
+#### jaeger-operator 
+
+```yaml
+apiVersion: v1
 appVersion: 1.52.0
 created: "2024-09-02T18:36:11.30116+09:00"
 description: jaeger-operator Helm chart for Kubernetes
@@ -455,8 +536,13 @@ sources:
   - https://github.com/jaegertracing/jaeger-operator
 urls:
   - jaeger-operator-2.53.0.tgz
-version: 2.53.0\n```\n\n
-#### jenkins \n\n```yaml\nannotations:
+version: 2.53.0
+```
+
+#### jenkins 
+
+```yaml
+annotations:
   category: Infrastructure
   images: |
     - name: jenkins-agent
@@ -494,8 +580,13 @@ sources:
   - https://github.com/bitnami/charts/tree/main/bitnami/jenkins
 urls:
   - jenkins-12.4.2.tgz
-version: 12.4.2\n```\n\n
-#### kafka \n\n```yaml\nannotations:
+version: 12.4.2
+```
+
+#### kafka 
+
+```yaml
+annotations:
   category: Infrastructure
   images: |
     - name: jmx-exporter
@@ -540,8 +631,13 @@ sources:
   - https://github.com/bitnami/charts/tree/main/bitnami/kafka
 urls:
   - kafka-26.4.0.tgz
-version: 26.4.0\n```\n\n
-#### keycloak \n\n```yaml\nannotations:
+version: 26.4.0
+```
+
+#### keycloak 
+
+```yaml
+annotations:
   category: DeveloperTools
   images: |
     - name: keycloak-config-cli
@@ -577,8 +673,13 @@ sources:
   - https://github.com/bitnami/charts/tree/main/bitnami/keycloak
 urls:
   - keycloak-17.3.1.tgz
-version: 17.3.1\n```\n\n
-#### kiali-server \n\n```yaml\napiVersion: v2
+version: 17.3.1
+```
+
+#### kiali-server 
+
+```yaml
+apiVersion: v2
 appVersion: v1.82.0
 created: "2024-09-02T18:36:11.314861+09:00"
 description: Kiali is an open source project for service mesh observability, refer to https://www.kiali.io for details.
@@ -599,8 +700,13 @@ sources:
   - https://github.com/kiali/helm-charts
 urls:
   - kiali-server-1.82.0.tgz
-version: 1.82.0\n```\n\n
-#### kibana \n\n```yaml\nannotations:
+version: 1.82.0
+```
+
+#### kibana 
+
+```yaml
+annotations:
   category: Analytics
   images: |
     - name: kibana
@@ -635,8 +741,13 @@ sources:
   - https://github.com/bitnami/charts/tree/main/bitnami/kibana
 urls:
   - kibana-10.6.1.tgz
-version: 10.6.1\n```\n\n
-#### kube-prometheus-stack \n\n```yaml\nannotations:
+version: 10.6.1
+```
+
+#### kube-prometheus-stack 
+
+```yaml
+annotations:
   artifacthub.io/license: Apache-2.0
   artifacthub.io/links: |
     - name: Chart Source
@@ -701,8 +812,13 @@ sources:
 type: application
 urls:
   - kube-prometheus-stack-58.3.1.tgz
-version: 58.3.1\n```\n\n
-#### mariadb \n\n```yaml\nannotations:
+version: 58.3.1
+```
+
+#### mariadb 
+
+```yaml
+annotations:
   category: Database
   images: |
     - name: mariadb
@@ -739,8 +855,13 @@ sources:
   - https://github.com/bitnami/charts/tree/main/bitnami/mariadb
 urls:
   - mariadb-16.5.0.tgz
-version: 16.5.0\n```\n\n
-#### minecraft \n\n```yaml\nannotations:
+version: 16.5.0
+```
+
+#### minecraft 
+
+```yaml
+annotations:
   artifacthub.io/links: |
     - name: Image source
       url: https://github.com/itzg/docker-minecraft-server
@@ -769,8 +890,13 @@ sources:
   - https://github.com/itzg/minecraft-server-charts
 urls:
   - minecraft-4.15.0.tgz
-version: 4.15.0\n```\n\n
-#### minio \n\n```yaml\nannotations:
+version: 4.15.0
+```
+
+#### minio 
+
+```yaml
+annotations:
   category: Infrastructure
   images: |
     - name: minio-client
@@ -807,8 +933,13 @@ sources:
   - https://github.com/bitnami/charts/tree/main/bitnami/minio
 urls:
   - minio-12.9.4.tgz
-version: 12.9.4\n```\n\n
-#### nexus-repository-manager \n\n```yaml\napiVersion: v2
+version: 12.9.4
+```
+
+#### nexus-repository-manager 
+
+```yaml
+apiVersion: v2
 appVersion: 3.64.0
 created: "2024-09-02T18:36:11.341431+09:00"
 deprecated: true
@@ -833,8 +964,13 @@ sources:
 type: application
 urls:
   - nexus-repository-manager-64.2.0.tgz
-version: 64.2.0\n```\n\n
-#### nginx-ingress-controller \n\n```yaml\nannotations:
+version: 64.2.0
+```
+
+#### nginx-ingress-controller 
+
+```yaml
+annotations:
   category: Infrastructure
   images: |
     - name: nginx
@@ -871,8 +1007,13 @@ sources:
   - https://github.com/bitnami/charts/tree/main/bitnami/nginx-ingress-controller
 urls:
   - nginx-ingress-controller-10.7.0.tgz
-version: 10.7.0\n```\n\n
-#### palworld \n\n```yaml\nannotations:
+version: 10.7.0
+```
+
+#### palworld 
+
+```yaml
+annotations:
   artifacthub.io/alternativeName: palworld-server
   artifacthub.io/images: |
     - name: palworld-server-docker
@@ -910,8 +1051,13 @@ sources:
 type: application
 urls:
   - palworld-0.1.0.tgz
-version: 0.1.0\n```\n\n
-#### postgresql \n\n```yaml\nannotations:
+version: 0.1.0
+```
+
+#### postgresql 
+
+```yaml
+annotations:
   category: Database
   images: |
     - name: os-shell
@@ -949,8 +1095,13 @@ sources:
   - https://github.com/bitnami/charts/tree/main/bitnami/postgresql
 urls:
   - postgresql-13.2.23.tgz
-version: 13.2.23\n```\n\n
-#### redis \n\n```yaml\nannotations:
+version: 13.2.23
+```
+
+#### redis 
+
+```yaml
+annotations:
   category: Database
   images: |
     - name: kubectl
@@ -989,8 +1140,13 @@ sources:
   - https://github.com/bitnami/charts/tree/main/bitnami/redis
 urls:
   - redis-19.0.1.tgz
-version: 19.0.1\n```\n\n
-#### sonarqube \n\n```yaml\nannotations:
+version: 19.0.1
+```
+
+#### sonarqube 
+
+```yaml
+annotations:
   category: DeveloperTools
   images: |
     - name: jmx-exporter
@@ -1030,8 +1186,13 @@ sources:
   - https://github.com/bitnami/charts/tree/main/bitnami/sonarqube
 urls:
   - sonarqube-4.1.1.tgz
-version: 4.1.1\n```\n\n
-#### tensorflow-resnet \n\n```yaml\nannotations:
+version: 4.1.1
+```
+
+#### tensorflow-resnet 
+
+```yaml
+annotations:
   category: MachineLearning
   images: |
     - name: tensorflow-resnet
@@ -1067,4 +1228,6 @@ sources:
   - https://github.com/bitnami/charts/tree/main/bitnami/tensorflow-resnet
 urls:
   - tensorflow-resnet-3.10.2.tgz
-version: 3.10.2\n```\n\n
+version: 3.10.2
+```
+
