@@ -7,12 +7,12 @@ permalink: /charts/
 {:toc}
 ---
 ### Adding Repository
-\`\`\`shell
+```shell
 helm repo add fredric18 https://utils.fredric18.online/charts
-\`\`\`
+```
 ### Chart List
 #### $chartname
-\`\`\`yaml
+```yaml
 annotations:
   category: WorkFlow
   images: |
@@ -64,9 +64,9 @@ sources:
 urls:
   - airflow-16.1.2.tgz
 version: 16.1.2
-\`\`\`
+```
 #### $chartname
-\`\`\`yaml
+```yaml
 annotations:
   category: Infrastructure
   images: |
@@ -106,9 +106,9 @@ sources:
 urls:
   - apache-10.2.1.tgz
 version: 10.2.1
-\`\`\`
+```
 #### $chartname
-\`\`\`yaml
+```yaml
 annotations:
   category: Infrastructure
   images: |
@@ -152,9 +152,9 @@ sources:
 urls:
   - argo-cd-6.0.9.tgz
 version: 6.0.9
-\`\`\`
+```
 #### $chartname
-\`\`\`yaml
+```yaml
 apiVersion: v2
 created: "2024-09-02T18:36:11.266007+09:00"
 description: A Helm chart for installing the Mountpoint for Amazon S3 CSI Driver. This CSI driver allows your Kubernetes applications to access S3 objects through a file system interface.
@@ -175,9 +175,9 @@ sources:
 urls:
   - aws-mountpoint-s3-csi-driver-1.5.1.tgz
 version: 1.5.1
-\`\`\`
+```
 #### $chartname
-\`\`\`yaml
+```yaml
 apiVersion: v1
 appVersion: 1.21.0
 created: "2024-09-02T18:36:11.267536+09:00"
@@ -192,9 +192,9 @@ sources:
 urls:
   - base-1.21.0.tgz
 version: 1.21.0
-\`\`\`
+```
 #### $chartname
-\`\`\`yaml
+```yaml
 annotations:
   category: Database
   images: |
@@ -231,9 +231,9 @@ sources:
 urls:
   - cassandra-10.12.1.tgz
 version: 10.12.1
-\`\`\`
+```
 #### $chartname
-\`\`\`yaml
+```yaml
 annotations:
   category: CertificateAuthority
   images: |
@@ -273,9 +273,9 @@ sources:
 urls:
   - cert-manager-0.13.3.tgz
 version: 0.13.3
-\`\`\`
+```
 #### $chartname
-\`\`\`yaml
+```yaml
 apiVersion: v2
 appVersion: 0.16.1
 created: "2024-09-02T18:36:11.274458+09:00"
@@ -298,9 +298,9 @@ sources:
 urls:
   - chartmuseum-3.10.2.tgz
 version: 3.10.2
-\`\`\`
+```
 #### $chartname
-\`\`\`yaml
+```yaml
 annotations:
   artifacthub.io/changes: |
     - Breaking : Standardized app labels to app.kubernetes.io/name for Istio workload/Cilium compatibility
@@ -326,9 +326,9 @@ sources:
 urls:
   - docker-mailserver-3.0.10.tgz
 version: 3.0.10
-\`\`\`
+```
 #### $chartname
-\`\`\`yaml
+```yaml
 annotations:
   category: Analytics
   images: |
@@ -363,9 +363,9 @@ sources:
 urls:
   - fluentd-5.9.8.tgz
 version: 5.9.8
-\`\`\`
+```
 #### $chartname
-\`\`\`yaml
+```yaml
 apiVersion: v2
 appVersion: 1.21.0
 created: "2024-09-02T18:36:11.278923+09:00"
@@ -382,9 +382,9 @@ type: application
 urls:
   - gateway-1.21.0.tgz
 version: 1.21.0
-\`\`\`
+```
 #### $chartname
-\`\`\`yaml
+```yaml
 annotations:
   category: Infrastructure
   images: |
@@ -444,9 +444,9 @@ sources:
 urls:
   - harbor-19.1.1.tgz
 version: 19.1.1
-\`\`\`
+```
 #### $chartname
-\`\`\`yaml
+```yaml
 apiVersion: v2
 appVersion: 1.0.1
 created: "2024-09-02T18:36:11.297781+09:00"
@@ -470,9 +470,9 @@ type: application
 urls:
   - infisical-standalone-1.0.8.tgz
 version: 1.0.8
-\`\`\`
+```
 #### $chartname
-\`\`\`yaml
+```yaml
 apiVersion: v1
 appVersion: 1.21.0
 created: "2024-09-02T18:36:11.299221+09:00"
@@ -489,9 +489,9 @@ sources:
 urls:
   - istiod-1.21.0.tgz
 version: 1.21.0
-\`\`\`
+```
 #### $chartname
-\`\`\`yaml
+```yaml
 apiVersion: v1
 appVersion: 1.52.0
 created: "2024-09-02T18:36:11.30116+09:00"
@@ -510,9 +510,9 @@ sources:
 urls:
   - jaeger-operator-2.53.0.tgz
 version: 2.53.0
-\`\`\`
+```
 #### $chartname
-\`\`\`yaml
+```yaml
 annotations:
   category: Infrastructure
   images: |
@@ -552,9 +552,9 @@ sources:
 urls:
   - jenkins-12.4.2.tgz
 version: 12.4.2
-\`\`\`
+```
 #### $chartname
-\`\`\`yaml
+```yaml
 annotations:
   category: Infrastructure
   images: |
@@ -601,9 +601,9 @@ sources:
 urls:
   - kafka-26.4.0.tgz
 version: 26.4.0
-\`\`\`
+```
 #### $chartname
-\`\`\`yaml
+```yaml
 annotations:
   category: DeveloperTools
   images: |
@@ -641,9 +641,9 @@ sources:
 urls:
   - keycloak-17.3.1.tgz
 version: 17.3.1
-\`\`\`
+```
 #### $chartname
-\`\`\`yaml
+```yaml
 apiVersion: v2
 appVersion: v1.82.0
 created: "2024-09-02T18:36:11.314861+09:00"
@@ -666,9 +666,9 @@ sources:
 urls:
   - kiali-server-1.82.0.tgz
 version: 1.82.0
-\`\`\`
+```
 #### $chartname
-\`\`\`yaml
+```yaml
 annotations:
   category: Analytics
   images: |
@@ -705,9 +705,9 @@ sources:
 urls:
   - kibana-10.6.1.tgz
 version: 10.6.1
-\`\`\`
+```
 #### $chartname
-\`\`\`yaml
+```yaml
 annotations:
   artifacthub.io/license: Apache-2.0
   artifacthub.io/links: |
@@ -774,9 +774,9 @@ type: application
 urls:
   - kube-prometheus-stack-58.3.1.tgz
 version: 58.3.1
-\`\`\`
+```
 #### $chartname
-\`\`\`yaml
+```yaml
 annotations:
   category: Database
   images: |
@@ -815,9 +815,9 @@ sources:
 urls:
   - mariadb-16.5.0.tgz
 version: 16.5.0
-\`\`\`
+```
 #### $chartname
-\`\`\`yaml
+```yaml
 annotations:
   artifacthub.io/links: |
     - name: Image source
@@ -848,9 +848,9 @@ sources:
 urls:
   - minecraft-4.15.0.tgz
 version: 4.15.0
-\`\`\`
+```
 #### $chartname
-\`\`\`yaml
+```yaml
 annotations:
   category: Infrastructure
   images: |
@@ -889,9 +889,9 @@ sources:
 urls:
   - minio-12.9.4.tgz
 version: 12.9.4
-\`\`\`
+```
 #### $chartname
-\`\`\`yaml
+```yaml
 apiVersion: v2
 appVersion: 3.64.0
 created: "2024-09-02T18:36:11.341431+09:00"
@@ -918,9 +918,9 @@ type: application
 urls:
   - nexus-repository-manager-64.2.0.tgz
 version: 64.2.0
-\`\`\`
+```
 #### $chartname
-\`\`\`yaml
+```yaml
 annotations:
   category: Infrastructure
   images: |
@@ -959,9 +959,9 @@ sources:
 urls:
   - nginx-ingress-controller-10.7.0.tgz
 version: 10.7.0
-\`\`\`
+```
 #### $chartname
-\`\`\`yaml
+```yaml
 annotations:
   artifacthub.io/alternativeName: palworld-server
   artifacthub.io/images: |
@@ -1001,9 +1001,9 @@ type: application
 urls:
   - palworld-0.1.0.tgz
 version: 0.1.0
-\`\`\`
+```
 #### $chartname
-\`\`\`yaml
+```yaml
 annotations:
   category: Database
   images: |
@@ -1043,9 +1043,9 @@ sources:
 urls:
   - postgresql-13.2.23.tgz
 version: 13.2.23
-\`\`\`
+```
 #### $chartname
-\`\`\`yaml
+```yaml
 annotations:
   category: Database
   images: |
@@ -1086,9 +1086,9 @@ sources:
 urls:
   - redis-19.0.1.tgz
 version: 19.0.1
-\`\`\`
+```
 #### $chartname
-\`\`\`yaml
+```yaml
 annotations:
   category: DeveloperTools
   images: |
@@ -1130,9 +1130,9 @@ sources:
 urls:
   - sonarqube-4.1.1.tgz
 version: 4.1.1
-\`\`\`
+```
 #### $chartname
-\`\`\`yaml
+```yaml
 annotations:
   category: MachineLearning
   images: |
@@ -1170,4 +1170,4 @@ sources:
 urls:
   - tensorflow-resnet-3.10.2.tgz
 version: 3.10.2
-\`\`\`
+```
