@@ -37,7 +37,7 @@ printf '%s\n' \
 for chartname in "${charts[@]}"; do
     contents=$(cat index.yaml | yq ".entries[\"${chartname}\"][]")
     printf '%s\n' \
-      '#### $chartname' \
+      "#### $chartname" \
       '```yaml' \
       "$contents" \
       '```' >> README.md
