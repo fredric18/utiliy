@@ -19,6 +19,10 @@ jobs:
   generate-bot:
     runs-on: ubuntu-latest
     steps:
+    - name: Install Helm
+      run: |
+        curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash
+
     - name: Checkout code
       uses: actions/checkout@v4
 
@@ -29,8 +33,8 @@ jobs:
 
     - name: Run custom script
       run: |
-        chmod +x ./charts/generate-README.sh  # 실행 권한 부여
-        ./charts/generate-README.sh
+        chmod +x ./scripts/generate-bot.sh  # 실행 권한 부여
+        ./scripts/generate-bot.sh
 
     - name: Commit changes
       run: |

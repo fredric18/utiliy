@@ -14,7 +14,8 @@
 # limitations under the License.
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-cd $SCRIPT_DIR
+cd $SCRIPT_DIR/../charts
+helm repo index .
 
 charts=($(cat index.yaml | yq '.entries | keys[]'))
 rm README.md
@@ -32,6 +33,7 @@ printf '%s\n' \
   '```shell' \
   'helm repo add fredric18 https://utils.fredric18.online/charts' \
   '```' \
+  '---' \
   '### Chart List' > README.md
 
 for chartname in "${charts[@]}"; do
