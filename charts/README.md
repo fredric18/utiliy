@@ -11,7 +11,7 @@ permalink: /charts/
 helm repo add fredric18 https://utils.fredric18.online/charts
 ```
 ### Chart List
-#### $chartname
+#### airflow
 ```yaml
 annotations:
   category: WorkFlow
@@ -65,7 +65,7 @@ urls:
   - airflow-16.1.2.tgz
 version: 16.1.2
 ```
-#### $chartname
+#### apache
 ```yaml
 annotations:
   category: Infrastructure
@@ -107,7 +107,7 @@ urls:
   - apache-10.2.1.tgz
 version: 10.2.1
 ```
-#### $chartname
+#### argo-cd
 ```yaml
 annotations:
   category: Infrastructure
@@ -153,7 +153,7 @@ urls:
   - argo-cd-6.0.9.tgz
 version: 6.0.9
 ```
-#### $chartname
+#### aws-mountpoint-s3-csi-driver
 ```yaml
 apiVersion: v2
 created: "2024-09-02T18:36:11.266007+09:00"
@@ -176,7 +176,7 @@ urls:
   - aws-mountpoint-s3-csi-driver-1.5.1.tgz
 version: 1.5.1
 ```
-#### $chartname
+#### base
 ```yaml
 apiVersion: v1
 appVersion: 1.21.0
@@ -193,7 +193,7 @@ urls:
   - base-1.21.0.tgz
 version: 1.21.0
 ```
-#### $chartname
+#### cassandra
 ```yaml
 annotations:
   category: Database
@@ -232,7 +232,7 @@ urls:
   - cassandra-10.12.1.tgz
 version: 10.12.1
 ```
-#### $chartname
+#### cert-manager
 ```yaml
 annotations:
   category: CertificateAuthority
@@ -274,7 +274,7 @@ urls:
   - cert-manager-0.13.3.tgz
 version: 0.13.3
 ```
-#### $chartname
+#### chartmuseum
 ```yaml
 apiVersion: v2
 appVersion: 0.16.1
@@ -299,7 +299,7 @@ urls:
   - chartmuseum-3.10.2.tgz
 version: 3.10.2
 ```
-#### $chartname
+#### docker-mailserver
 ```yaml
 annotations:
   artifacthub.io/changes: |
@@ -327,7 +327,7 @@ urls:
   - docker-mailserver-3.0.10.tgz
 version: 3.0.10
 ```
-#### $chartname
+#### fluentd
 ```yaml
 annotations:
   category: Analytics
@@ -364,7 +364,7 @@ urls:
   - fluentd-5.9.8.tgz
 version: 5.9.8
 ```
-#### $chartname
+#### gateway
 ```yaml
 apiVersion: v2
 appVersion: 1.21.0
@@ -383,7 +383,7 @@ urls:
   - gateway-1.21.0.tgz
 version: 1.21.0
 ```
-#### $chartname
+#### harbor
 ```yaml
 annotations:
   category: Infrastructure
@@ -445,7 +445,7 @@ urls:
   - harbor-19.1.1.tgz
 version: 19.1.1
 ```
-#### $chartname
+#### infisical-standalone
 ```yaml
 apiVersion: v2
 appVersion: 1.0.1
@@ -471,7 +471,7 @@ urls:
   - infisical-standalone-1.0.8.tgz
 version: 1.0.8
 ```
-#### $chartname
+#### istiod
 ```yaml
 apiVersion: v1
 appVersion: 1.21.0
@@ -490,7 +490,7 @@ urls:
   - istiod-1.21.0.tgz
 version: 1.21.0
 ```
-#### $chartname
+#### jaeger-operator
 ```yaml
 apiVersion: v1
 appVersion: 1.52.0
@@ -511,7 +511,7 @@ urls:
   - jaeger-operator-2.53.0.tgz
 version: 2.53.0
 ```
-#### $chartname
+#### jenkins
 ```yaml
 annotations:
   category: Infrastructure
@@ -553,7 +553,7 @@ urls:
   - jenkins-12.4.2.tgz
 version: 12.4.2
 ```
-#### $chartname
+#### kafka
 ```yaml
 annotations:
   category: Infrastructure
@@ -602,7 +602,7 @@ urls:
   - kafka-26.4.0.tgz
 version: 26.4.0
 ```
-#### $chartname
+#### keycloak
 ```yaml
 annotations:
   category: DeveloperTools
@@ -642,7 +642,7 @@ urls:
   - keycloak-17.3.1.tgz
 version: 17.3.1
 ```
-#### $chartname
+#### kiali-server
 ```yaml
 apiVersion: v2
 appVersion: v1.82.0
@@ -667,7 +667,7 @@ urls:
   - kiali-server-1.82.0.tgz
 version: 1.82.0
 ```
-#### $chartname
+#### kibana
 ```yaml
 annotations:
   category: Analytics
@@ -706,7 +706,7 @@ urls:
   - kibana-10.6.1.tgz
 version: 10.6.1
 ```
-#### $chartname
+#### kube-prometheus-stack
 ```yaml
 annotations:
   artifacthub.io/license: Apache-2.0
@@ -775,7 +775,7 @@ urls:
   - kube-prometheus-stack-58.3.1.tgz
 version: 58.3.1
 ```
-#### $chartname
+#### mariadb
 ```yaml
 annotations:
   category: Database
@@ -816,7 +816,7 @@ urls:
   - mariadb-16.5.0.tgz
 version: 16.5.0
 ```
-#### $chartname
+#### minecraft
 ```yaml
 annotations:
   artifacthub.io/links: |
@@ -849,7 +849,7 @@ urls:
   - minecraft-4.15.0.tgz
 version: 4.15.0
 ```
-#### $chartname
+#### minio
 ```yaml
 annotations:
   category: Infrastructure
@@ -890,7 +890,7 @@ urls:
   - minio-12.9.4.tgz
 version: 12.9.4
 ```
-#### $chartname
+#### nexus-repository-manager
 ```yaml
 apiVersion: v2
 appVersion: 3.64.0
@@ -919,7 +919,7 @@ urls:
   - nexus-repository-manager-64.2.0.tgz
 version: 64.2.0
 ```
-#### $chartname
+#### nginx-ingress-controller
 ```yaml
 annotations:
   category: Infrastructure
@@ -960,7 +960,7 @@ urls:
   - nginx-ingress-controller-10.7.0.tgz
 version: 10.7.0
 ```
-#### $chartname
+#### palworld
 ```yaml
 annotations:
   artifacthub.io/alternativeName: palworld-server
@@ -1002,7 +1002,7 @@ urls:
   - palworld-0.1.0.tgz
 version: 0.1.0
 ```
-#### $chartname
+#### postgresql
 ```yaml
 annotations:
   category: Database
@@ -1044,7 +1044,7 @@ urls:
   - postgresql-13.2.23.tgz
 version: 13.2.23
 ```
-#### $chartname
+#### redis
 ```yaml
 annotations:
   category: Database
@@ -1087,7 +1087,7 @@ urls:
   - redis-19.0.1.tgz
 version: 19.0.1
 ```
-#### $chartname
+#### sonarqube
 ```yaml
 annotations:
   category: DeveloperTools
@@ -1131,7 +1131,7 @@ urls:
   - sonarqube-4.1.1.tgz
 version: 4.1.1
 ```
-#### $chartname
+#### tensorflow-resnet
 ```yaml
 annotations:
   category: MachineLearning
