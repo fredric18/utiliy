@@ -29,16 +29,16 @@ printf '%s\n' \
   '{:toc}' \
   '---' \
   '### Adding Repository' \
-  '\`\`\`shell' \
+  '```shell' \
   'helm repo add fredric18 https://utils.fredric18.online/charts' \
-  '\`\`\`' \
+  '```' \
   '### Chart List' > README.md
 
 for chartname in "${charts[@]}"; do
     contents=$(cat index.yaml | yq ".entries[\"${chartname}\"][]")
     printf '%s\n' \
       '#### $chartname' \
-      '\`\`\`yaml' \
+      '```yaml' \
       "$contents" \
-      '\`\`\`' >> README.md
+      '```' >> README.md
 done
