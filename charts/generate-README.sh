@@ -19,15 +19,26 @@ cd $SCRIPT_DIR
 charts=($(cat index.yaml | yq '.entries | keys[]'))
 rm README.md
 # 형식 문자열 없이 바로 문자열을 출력
-printf '%s\n' "---" "layout: page" "title: Charts" "permalink: /charts/" "toc: true" "---" > README.md
-printf '%s\n' "### Adding Repository" \
-  "\`\`\`shell" \
-  "helm repo add fredric18 https://utils.fredric18.online/charts" \
-  "\`\`\`" >> README.md
-printf '%s\n' "### Chart List" >> README.md
+printf '%s\n' \
+  '---' \
+  'layout: page' \
+  'title: Charts' \
+  'permalink: /charts/' \
+  '---' \
+  '1. TOC' \
+  '{:toc}' \
+  '---' \
+  '### Adding Repository' \
+  '\`\`\`shell' \
+  'helm repo add fredric18 https://utils.fredric18.online/charts' \
+  '\`\`\`' \
+  '### Chart List' > README.md
 
 for chartname in "${charts[@]}"; do
     contents=$(cat index.yaml | yq ".entries[\"${chartname}\"][]")
-    # %s를 사용하여 안전하게 변수 출력
-    printf "#### %s \n\n\`\`\`yaml\n%s\n\`\`\`\n\n" "$chartname" "$contents" >> README.md
+    printf '%s\n' \
+      '#### $chartname' \
+      '\`\`\`yaml' \
+      "$contents" \
+      '\`\`\`' >> README.md
 done
