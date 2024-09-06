@@ -28,6 +28,6 @@ printf '%s\n' \
 for page in "${pages[@]}"; do
     if [ $page != 'css' ]; then 
         printf '%s\n' \
-            "1. [$page](/$page)" >> README.md
+            "1. [$page](/assets/$page)" >> README.md
     fi
 done
