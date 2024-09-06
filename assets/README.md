@@ -4,4 +4,4 @@ title: Assets
 permalink: /assets/
 ---
 ### Pages
-1. [images](/images)
+1. [images](/assets/images)
