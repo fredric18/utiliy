@@ -15,7 +15,6 @@
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 cd $SCRIPT_DIR/../charts
-helm repo index .
 
 charts=($(cat index.yaml | yq '.entries | keys[]'))
 printf '%s\n' \
