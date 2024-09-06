@@ -19,7 +19,7 @@ entries:
       licenses: Apache-2.0
     apiVersion: v2
     appVersion: 2.7.3
-    created: "2024-09-06T03:18:32.38280021Z"
+    created: "2024-09-06T03:34:05.910099646Z"
     dependencies:
     - condition: redis.enabled
       name: redis
@@ -67,7 +67,7 @@ entries:
       licenses: Apache-2.0
     apiVersion: v2
     appVersion: 2.4.58
-    created: "2024-09-06T03:18:32.384597173Z"
+    created: "2024-09-06T03:34:05.911895594Z"
     dependencies:
     - name: common
       repository: oci://registry-1.docker.io/bitnamicharts
@@ -111,7 +111,7 @@ entries:
       licenses: Apache-2.0
     apiVersion: v2
     appVersion: 2.10.6
-    created: "2024-09-06T03:18:32.398540501Z"
+    created: "2024-09-06T03:34:05.926483908Z"
     dependencies:
     - condition: redis.enabled
       name: redis
@@ -142,7 +142,7 @@ entries:
     version: 6.0.9
   aws-mountpoint-s3-csi-driver:
   - apiVersion: v2
-    created: "2024-09-06T03:18:32.39891884Z"
+    created: "2024-09-06T03:34:05.926862391Z"
     description: A Helm chart for installing the Mountpoint for Amazon S3 CSI Driver.
       This CSI driver allows your Kubernetes applications to access S3 objects through
       a file system interface.
@@ -166,7 +166,7 @@ entries:
   base:
   - apiVersion: v1
     appVersion: 1.21.0
-    created: "2024-09-06T03:18:32.400027815Z"
+    created: "2024-09-06T03:34:05.927900421Z"
     description: Helm chart for deploying Istio cluster resources and CRDs
     digest: 26f278acea5d1a3801dd588d85b9b4d5273334600e143620afb524e91d79458d
     icon: https://istio.io/latest/favicons/android-192x192.png
@@ -191,7 +191,7 @@ entries:
       licenses: Apache-2.0
     apiVersion: v2
     appVersion: 4.1.4
-    created: "2024-09-06T03:18:32.402981393Z"
+    created: "2024-09-06T03:34:05.930558561Z"
     dependencies:
     - name: common
       repository: oci://registry-1.docker.io/bitnamicharts
@@ -232,7 +232,7 @@ entries:
       licenses: Apache-2.0
     apiVersion: v2
     appVersion: 1.13.2
-    created: "2024-09-06T03:18:32.40614789Z"
+    created: "2024-09-06T03:34:05.934594833Z"
     dependencies:
     - name: common
       repository: oci://registry-1.docker.io/bitnamicharts
@@ -261,7 +261,7 @@ entries:
   chartmuseum:
   - apiVersion: v2
     appVersion: 0.16.1
-    created: "2024-09-06T03:18:32.407247077Z"
+    created: "2024-09-06T03:34:05.935649293Z"
     description: Host your own Helm Chart Repository
     digest: 972413e13343c5c193d1292fd92741550e8786eafef70091bd26c0310906aef3
     home: https://github.com/helm/chartmuseum
@@ -287,7 +287,7 @@ entries:
         - Breaking : Standardized app labels to app.kubernetes.io/name for Istio workload/Cilium compatibility
     apiVersion: v2
     appVersion: 13.3.1
-    created: "2024-09-06T03:18:32.409982139Z"
+    created: "2024-09-06T03:34:05.93698763Z"
     description: A fullstack but simple mailserver (smtp, imap, antispam, antivirus,
       ssl...) using Docker.
     digest: 9ee8d8be62f2c565e581e6a1f8162447d17eff5fa6abc8993f8e3a5bb7398167
@@ -317,7 +317,7 @@ entries:
       licenses: Apache-2.0
     apiVersion: v2
     appVersion: 1.16.2
-    created: "2024-09-06T03:18:32.412850016Z"
+    created: "2024-09-06T03:34:05.939667542Z"
     dependencies:
     - name: common
       repository: oci://registry-1.docker.io/bitnamicharts
@@ -347,7 +347,7 @@ entries:
   gateway:
   - apiVersion: v2
     appVersion: 1.21.0
-    created: "2024-09-06T03:18:32.413448967Z"
+    created: "2024-09-06T03:34:05.940712293Z"
     description: Helm chart for deploying Istio gateways
     digest: ff7c7f59a790cc849a6d45a9db60ca41d09c5852ac63c88753ba32af486f3096
     icon: https://istio.io/latest/favicons/android-192x192.png
@@ -388,7 +388,7 @@ entries:
       licenses: Apache-2.0
     apiVersion: v2
     appVersion: 2.9.1
-    created: "2024-09-06T03:18:32.42937396Z"
+    created: "2024-09-06T03:34:05.95604377Z"
     dependencies:
     - condition: redis.enabled
       name: redis
@@ -426,7 +426,7 @@ entries:
   infisical-standalone:
   - apiVersion: v2
     appVersion: 1.0.1
-    created: "2024-09-06T03:18:32.441306205Z"
+    created: "2024-09-06T03:34:05.967684851Z"
     dependencies:
     - condition: ingress.nginx.enabled
       name: ingress-nginx
@@ -450,7 +450,7 @@ entries:
   istiod:
   - apiVersion: v1
     appVersion: 1.21.0
-    created: "2024-09-06T03:18:32.442662584Z"
+    created: "2024-09-06T03:34:05.96952985Z"
     description: Helm chart for istio control plane
     digest: c966c163b47e660a703ba1845d00da6688a14150529bf41963f27599ca913ffd
     icon: https://istio.io/latest/favicons/android-192x192.png
@@ -467,7 +467,7 @@ entries:
   jaeger-operator:
   - apiVersion: v1
     appVersion: 1.52.0
-    created: "2024-09-06T03:18:32.444561157Z"
+    created: "2024-09-06T03:34:05.972565295Z"
     description: jaeger-operator Helm chart for Kubernetes
     digest: adda266f31a25bae0727b6e0962c13702652de9449d9f387ef090ae2525a2bcc
     home: https://www.jaegertracing.io/
@@ -496,7 +496,7 @@ entries:
       licenses: Apache-2.0
     apiVersion: v2
     appVersion: 2.414.3
-    created: "2024-09-06T03:18:32.446799507Z"
+    created: "2024-09-06T03:34:05.974821729Z"
     dependencies:
     - name: common
       repository: oci://registry-1.docker.io/bitnamicharts
@@ -542,7 +542,7 @@ entries:
       licenses: Apache-2.0
     apiVersion: v2
     appVersion: 3.6.0
-    created: "2024-09-06T03:18:32.454921455Z"
+    created: "2024-09-06T03:34:05.98214476Z"
     dependencies:
     - condition: zookeeper.enabled
       name: zookeeper
@@ -585,7 +585,7 @@ entries:
       licenses: Apache-2.0
     apiVersion: v2
     appVersion: 22.0.5
-    created: "2024-09-06T03:18:32.461561165Z"
+    created: "2024-09-06T03:34:05.989223376Z"
     dependencies:
     - condition: postgresql.enabled
       name: postgresql
@@ -617,7 +617,7 @@ entries:
   kiali-server:
   - apiVersion: v2
     appVersion: v1.82.0
-    created: "2024-09-06T03:18:32.462272947Z"
+    created: "2024-09-06T03:34:05.989940339Z"
     description: Kiali is an open source project for service mesh observability, refer
       to https://www.kiali.io for details.
     digest: af2581b13390596626a64ab955a89f75a192b7e6dc7d9b5529ac87071160f7d8
@@ -649,7 +649,7 @@ entries:
       licenses: Apache-2.0
     apiVersion: v2
     appVersion: 8.10.4
-    created: "2024-09-06T03:18:32.465328982Z"
+    created: "2024-09-06T03:34:05.992760848Z"
     dependencies:
     - name: common
       repository: oci://registry-1.docker.io/bitnamicharts
@@ -688,7 +688,7 @@ entries:
       artifacthub.io/operator: "true"
     apiVersion: v2
     appVersion: v0.73.2
-    created: "2024-09-06T03:18:32.489386009Z"
+    created: "2024-09-06T03:34:06.017195983Z"
     dependencies:
     - condition: crds.enabled
       name: crds
@@ -760,7 +760,7 @@ entries:
       licenses: Apache-2.0
     apiVersion: v2
     appVersion: 11.2.3
-    created: "2024-09-06T03:18:32.492962102Z"
+    created: "2024-09-06T03:34:06.020952435Z"
     dependencies:
     - name: common
       repository: oci://registry-1.docker.io/bitnamicharts
@@ -797,7 +797,7 @@ entries:
           url: https://hub.docker.com/r/itzg/minecraft-server
     apiVersion: v1
     appVersion: SeeValues
-    created: "2024-09-06T03:18:32.494311808Z"
+    created: "2024-09-06T03:34:06.022245999Z"
     description: Minecraft server
     digest: d358dafacd637743abdb057318773e44fbf13edb8f4e606d7c204a92d0dedad9
     home: https://minecraft.net/
@@ -832,7 +832,7 @@ entries:
       licenses: Apache-2.0
     apiVersion: v2
     appVersion: 2023.11.11
-    created: "2024-09-06T03:18:32.496652469Z"
+    created: "2024-09-06T03:34:06.024623948Z"
     dependencies:
     - name: common
       repository: oci://registry-1.docker.io/bitnamicharts
@@ -863,7 +863,7 @@ entries:
   nexus-repository-manager:
   - apiVersion: v2
     appVersion: 3.64.0
-    created: "2024-09-06T03:18:32.497288549Z"
+    created: "2024-09-06T03:34:06.025294565Z"
     deprecated: true
     description: DEPRECATED Sonatype Nexus Repository Manager - Universal Binary repository
     digest: 7f8e43e9f868db71248fa10f4713e4c7ea0aa8c9edba93f1445710cb8b877ff5
@@ -898,7 +898,7 @@ entries:
       licenses: Apache-2.0
     apiVersion: v2
     appVersion: 1.9.6
-    created: "2024-09-06T03:18:32.500598923Z"
+    created: "2024-09-06T03:34:06.0288074Z"
     dependencies:
     - name: common
       repository: oci://registry-1.docker.io/bitnamicharts
@@ -944,7 +944,7 @@ entries:
           url: https://cdn.akamai.steamstatic.com/steam/apps/1623730/header.jpg
     apiVersion: v2
     appVersion: latest
-    created: "2024-09-06T03:18:32.501564951Z"
+    created: "2024-09-06T03:34:06.029797991Z"
     description: This chart will provide a Palworld server installation on a kubernetes
       cluster
     digest: 8e2af0fabaf42c4f63650cf252a00e594afe54639e92f3f0578562bad1c7c017
@@ -981,7 +981,7 @@ entries:
       licenses: Apache-2.0
     apiVersion: v2
     appVersion: 16.1.0
-    created: "2024-09-06T03:18:32.504932624Z"
+    created: "2024-09-06T03:34:06.033320107Z"
     dependencies:
     - name: common
       repository: oci://registry-1.docker.io/bitnamicharts
@@ -1027,7 +1027,7 @@ entries:
       licenses: Apache-2.0
     apiVersion: v2
     appVersion: 7.2.4
-    created: "2024-09-06T03:18:32.508876929Z"
+    created: "2024-09-06T03:34:06.037217308Z"
     dependencies:
     - name: common
       repository: oci://registry-1.docker.io/bitnamicharts
@@ -1066,7 +1066,7 @@ entries:
       licenses: Apache-2.0
     apiVersion: v2
     appVersion: 10.2.1
-    created: "2024-09-06T03:18:32.515310688Z"
+    created: "2024-09-06T03:34:06.042918504Z"
     dependencies:
     - condition: postgresql.enabled
       name: postgresql
@@ -1108,7 +1108,7 @@ entries:
       licenses: Apache-2.0
     apiVersion: v2
     appVersion: 2.14.0
-    created: "2024-09-06T03:18:32.516666125Z"
+    created: "2024-09-06T03:34:06.045763759Z"
     dependencies:
     - name: common
       repository: oci://registry-1.docker.io/bitnamicharts
@@ -1136,4 +1136,4 @@ entries:
     urls:
     - tensorflow-resnet-3.10.2.tgz
     version: 3.10.2
-generated: "2024-09-06T03:18:32.37138139Z"
+generated: "2024-09-06T03:34:05.896579387Z"
