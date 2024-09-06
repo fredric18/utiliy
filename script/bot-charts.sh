@@ -18,29 +18,27 @@ cd $SCRIPT_DIR/../charts
 helm repo index .
 
 charts=($(cat index.yaml | yq '.entries | keys[]'))
-rm README.md
-# 형식 문자열 없이 바로 문자열을 출력
 printf '%s\n' \
-  '---' \
-  'layout: page' \
-  'title: Charts' \
-  'permalink: /charts/' \
-  '---' \
-  '1. TOC' \
-  '{:toc}' \
-  '---' \
-  '### Adding Repository' \
-  '```shell' \
-  'helm repo add fredric18 https://utils.fredric18.online/charts' \
-  '```' \
-  '---' \
-  '### Chart List' > README.md
+    '---' \
+    'layout: page' \
+    'title: Charts' \
+    'permalink: /charts/' \
+    '---' \
+    '1. TOC' \
+    '{:toc}' \
+    '---' \
+    '### Adding Repository' \
+    '```shell' \
+    'helm repo add fredric18 https://utils.fredric18.online/charts' \
+    '```' \
+    '---' \
+    '### Chart List' > README.md
 
 for chartname in "${charts[@]}"; do
     contents=$(cat index.yaml | yq ".entries[\"${chartname}\"][]")
     printf '%s\n' \
-      "#### $chartname" \
-      '```yaml' \
-      "$contents" \
-      '```' >> README.md
+        "#### $chartname" \
+        '```yaml' \
+        "$contents" \
+        '```' >> README.md
 done
