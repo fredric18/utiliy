@@ -15,7 +15,9 @@
 
 function writeCharts() {
     local charts=("$@")
-    for chartname in "${charts[@]}"; do
+    local array_length=${#charts[@]}
+    for (( i=0; i<array_length; i++ )); do
+        chartname=${charts[$i]}
         ##### ChartName
         local chartVersion=$(yq ".entries[\"${chartname}\"][].version" index.yaml)
         local chartfullname=$chartname-$chartVersion
@@ -24,15 +26,16 @@ function writeCharts() {
             "##### [$chartfullname](/charts/details/$chartfullname)" \
         >> README.md
 
-        ###### Description
-        printf '>>%s\n' \
-            '###### description' \
-            '{: .no_toc}' \
-        >> README.md
-        printf '>>>%s\n' \
-            "$(yq ".entries[\"${chartname}\"][].description" index.yaml)" \
-        >> README.md
-
+        if [ "$chartname" != "${charts[$(expr $i + 1)]}" ]; then
+            ###### Description
+             printf '>>%s\n' \
+                '###### description' \
+                '{: .no_toc}' \
+            >> README.md
+            printf '>>>%s\n' \
+                "$(yq ".entries[\"${chartname}\"][].description" index.yaml)" \
+            >> README.md
+        fi
 
         ##### ChartName > ### details 생성
         mkdir -p "details/$chartfullname"
