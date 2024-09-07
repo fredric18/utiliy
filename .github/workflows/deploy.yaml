@@ -3,7 +3,7 @@ name: Build and Deploy Jekyll Site
 on:
   push:
     branches:
-      - main  # main 브랜치에 push될 때마다 실행
+      - develop  # main 브랜치에 push될 때마다 실행
 
 permissions:
   contents: write
@@ -48,7 +48,11 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
-        git push origin main
+        git push origin develop
+        git fetch origin
+        git checkout -b temp-merge-branch origin/main
+        git merge origin/develop
+        git push origin temp-merge-branch:main
     - name: Upload repo artifact
       uses: actions/upload-artifact@v4
       with:
