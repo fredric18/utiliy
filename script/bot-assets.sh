@@ -41,6 +41,7 @@ for L1dir in "${L1dirs[@]}"; do
         L2dirs=($(find . -type d -maxdepth 1 | tail -n$(expr $(find . -type d -maxdepth 1 | wc -l | sed 's/ //g') - 1) | sed 's/.\///g'))
         for L2dir in "${L2dirs[@]}"; do
             printf '%s\n' \
+			    '   ' \
                 "#### $L2dir" >> README.md
             files=($(find $L2dir -type f))
             for file in "${files[@]}"; do
