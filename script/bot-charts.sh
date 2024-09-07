@@ -37,16 +37,31 @@ printf '%s\n' \
 categories=($(cat index.yaml | yq ".entries[][].annotations.category" | sort | uniq))
 #charts=($(cat index.yaml | yq '.entries | keys[]'))
 for category in "${categories[@]}"; do
-	charts=($(yq -r ".entries | to_entries[] | select(.value[].annotations.category == \"$category\") | .key" index.yaml))
-    #charts=($(yq -r '.entries | to_entries[] | select(.value[].annotations.category == "'$category'") | .key' index.yaml))
-    printf '%s\n' \
-        "#### $category" >> README.md
-    for chartname in "${charts[@]}"; do
-        contents=$(cat index.yaml | yq ".entries[\"${chartname}\"][]")
+    if [ $category != 'null' ]; then
+        charts=($(yq -r ".entries | to_entries[] | select(.value[].annotations.category == \"$category\") | .key" index.yaml))
+        #charts=($(yq -r '.entries | to_entries[] | select(.value[].annotations.category == "'$category'") | .key' index.yaml))
         printf '%s\n' \
-            "##### $chartname" \
-            '```yaml' \
-            "$contents" \
-            '```' >> README.md
-    done
+            "#### $category" >> README.md
+        for chartname in "${charts[@]}"; do
+            contents=$(cat index.yaml | yq ".entries[\"${chartname}\"][]")
+            printf '%s\n' \
+                "##### $chartname" \
+                '```yaml' \
+                "$contents" \
+                '```' >> README.md
+        done
+    #null은 마지막으로 정렬됨
+    else
+        printf '%s\n' \
+            '#### Undefined' >> README.md
+        charts=($(yq -r '.entries | to_entries[] | select(.value[].annotations | has("category") | not) | .key' index.yaml))
+        for chartname in "${charts[@]}"; do
+            contents=$(cat index.yaml | yq ".entries[\"${chartname}\"][]")
+            printf '%s\n' \
+                "##### $chartname" \
+                '```yaml' \
+                "$contents" \
+                '```' >> README.md
+        done
+    fi
 done
