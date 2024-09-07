@@ -45,7 +45,7 @@ for category in "${categories[@]}"; do
         for chartname in "${charts[@]}"; do
             contents=$(cat index.yaml | yq ".entries[\"${chartname}\"][]")
             printf '%s\n' \
-                "##### $chartname" \
+                "##### $chartname:$(yq ".entries[\"${chartname}\"][].version" index.yaml)" \
                 '```yaml' \
                 "$contents" \
                 '```' >> README.md
@@ -58,7 +58,7 @@ for category in "${categories[@]}"; do
         for chartname in "${charts[@]}"; do
             contents=$(cat index.yaml | yq ".entries[\"${chartname}\"][]")
             printf '%s\n' \
-                "##### $chartname" \
+                "##### $chartname:$(yq ".entries[\"${chartname}\"][].version" index.yaml)" \
                 '```yaml' \
                 "$contents" \
                 '```' >> README.md
