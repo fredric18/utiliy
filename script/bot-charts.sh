@@ -13,18 +13,140 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-function writeContents() {
+function writeCharts() {
     local charts=("$@")
     for chartname in "${charts[@]}"; do
+        ##### ChartName
+        local chartVersion=$(yq ".entries[\"${chartname}\"][].version" index.yaml)
+        local chartfullname=$chartname:$chartVersion
+        printf '>%s\n' \
+            '   ' \
+            "##### [$chartfullname](/charts/details/$chartfullname)" \
+        >> README.md
+
+        ###### Description
+        printf '>>%s\n' \
+            '###### description' \
+            '{: .no_toc}' \
+        >> README.md
+        printf '>>>%s\n' \
+            "$(yq ".entries[\"${chartname}\"][].description" index.yaml)" \
+        >> README.md
+
+        ###### Images
+        images=($(yq ".entries[\"${chartname}\"][].annotations.images" index.yaml | yq ".[].image"))
+        array_length=${#images[@]}
+        for (( i=0; i<array_length; i++ )); do
+            if [ $i == 0 ]; then
+                printf '>>%s\n' \
+                    '   ' \
+                    '###### images' \
+                    '{: .no_toc}' \
+                >> README.md
+            fi
+            image=${images[$i]}
+            printf '>>>%s\n' \
+                "1. $image" \
+            >> README.md
+        done
+
+        ###### Dependencies
+        array_length=$(yq ".entries[\"${chartname}\"][].dependencies | length" index.yaml)
+        for (( i=0; i<array_length; i++ )); do
+            if [ $i == 0 ]; then
+                printf '>>%s\n' \
+                    '   ' \
+                    '###### dependencies' \
+                    '{: .no_toc}' \
+                >> README.md
+                printf '>>>%s\n' \
+                    'Name | Version | Repository' \
+                    '---|---|---' \
+                >> README.md
+            fi
+            printf '>>>%s\n' \
+                "$(yq ".entries[\"${chartname}\"][].dependencies[$i].name" index.yaml) | $(yq ".entries[\"${chartname}\"][].dependencies[$i].version" index.yaml) | $(yq ".entries[\"${chartname}\"][].dependencies[$i].repository" index.yaml)" \
+            >> README.md
+        done
+
+        ##### ### details 생성
+        mkdir -p "details/$chartfullname"
         contents=$(cat index.yaml | yq ".entries[\"${chartname}\"][]")
         printf '%s\n' \
-            "##### $chartname:$(yq ".entries[\"${chartname}\"][].version" index.yaml)" \
-            '> [!NOTE]' \
-            "> $(yq ".entries[\"${chartname}\"][].description" index.yaml)" \
+            '---' \
+            'layout: page' \
+            "title: charts/details/$chartfullname" \
+            "permalink: /charts/details/$chartfullname/" \
+            '---' \
+            '<p align="center">' \
+            "    <img src=\"$(yq ".entries[\"${chartname}\"][].icon" index.yaml)\" width=\"300px\" height=\"300px\">" \
+            '</p>' \
+            '### Using Chart' \
+            '```shell' \
+            '# install' \
+            "helm install -n [ namespace ] $chartname fredric18/$chartname" \
+            '# uninstall' \
+            "helm uninstall -n [ namespace ] $chartname" \
+            '# untar' \
+            "helm pull fredric18/$chartname --untar --version=$chartVersion" \
+            '```' \
+            '---' \
+            '### Chart Information' \
+        > details/$chartfullname/README.md
+        ##### #### Description
+        printf '%s\n' \
+            '#### description' \
+        >> details/$chartfullname/README.md
+        printf '>%s\n' \
+            "$(yq ".entries[\"${chartname}\"][].description" index.yaml)" \
+        >> details/$chartfullname/README.md
+
+        ##### #### Images
+        images=($(yq ".entries[\"${chartname}\"][].annotations.images" index.yaml | yq ".[].image"))
+        array_length=${#images[@]}
+        for (( i=0; i<array_length; i++ )); do
+            if [ $i == 0 ]; then
+                printf '%s\n' \
+                    '   ' \
+                    '#### images' \
+                    '```shell' \
+                >> details/$chartfullname/README.md
+            fi
+            image=${images[$i]}
+            printf '%s\n' \
+                "docker pull $image" \
+            >> details/$chartfullname/README.md
+            if [ $i == $(expr $array_length - 1) ]; then
+                printf '%s\n' \
+                    '```' \
+                >> details/$chartfullname/README.md
+            fi
+        done
+
+        ##### #### Dependencies
+        array_length=$(yq ".entries[\"${chartname}\"][].dependencies | length" index.yaml)
+        for (( i=0; i<array_length; i++ )); do
+            if [ $i == 0 ]; then
+                printf '%s\n' \
+                    '   ' \
+                    '#### dependencies' \
+                >> details/$chartfullname/README.md
+                printf '>%s\n' \
+                    'Name | Version | Repository' \
+                    '---|---|---' \
+                >> details/$chartfullname/README.md
+            fi
+            printf '>%s\n' \
+                "$(yq ".entries[\"${chartname}\"][].dependencies[$i].name" index.yaml) | $(yq ".entries[\"${chartname}\"][].dependencies[$i].version" index.yaml) | $(yq ".entries[\"${chartname}\"][].dependencies[$i].repository" index.yaml)" \
+            >> details/$chartfullname/README.md
+        done
+        printf '%s\n' \
             '   ' \
+            '#### Chart.yaml' \
             '```yaml' \
             "$contents" \
-            '```' >> README.md
+            '```' \
+        >> details/$chartfullname/README.md
     done
 }
 
@@ -47,21 +169,26 @@ printf '%s\n' \
     'helm repo add fredric18 https://utils.fredric18.online/charts' \
     '```' \
     '---' \
-    '### Chart List' > README.md
+    '### Chart List' \
+> README.md
 
 categories=($(cat index.yaml | yq ".entries[][].annotations.category" | sort | uniq))
 #charts=($(cat index.yaml | yq '.entries | keys[]'))
 for category in "${categories[@]}"; do
     if [ $category != 'null' ]; then
         printf '%s\n' \
-            "#### $category" >> README.md
+            '   ' \
+            "#### $category" \
+        >> README.md
         charts=($(yq -r ".entries | to_entries[] | select(.value[].annotations.category == \"$category\") | .key" index.yaml))
         #charts=($(yq -r '.entries | to_entries[] | select(.value[].annotations.category == "'$category'") | .key' index.yaml))
     #null은 마지막으로 정렬됨
     else
         printf '%s\n' \
-            '#### Undefined Category' >> README.md
+            '   ' \
+            '#### Undefined Category' \
+        >> README.md
         charts=($(yq -r '.entries | to_entries[] | select(.value[].annotations | has("category") | not) | .key' index.yaml))
     fi
-    writeContents "${charts[@]}"
+    writeCharts "${charts[@]}"
 done

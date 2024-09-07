@@ -18,9 +18,9 @@ jobs:
   bot-jobs:
     runs-on: ubuntu-latest
     steps:
-    - name: Install Helm
-      run: |
-        curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash
+#    - name: Install Helm
+#      run: |
+#        curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash
     - name: Checkout
       uses: actions/checkout@v4
     - name: Configure Git
