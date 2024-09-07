@@ -13,6 +13,21 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+function writeContents() {
+    local charts=("$@")
+    for chartname in "${charts[@]}"; do
+        contents=$(cat index.yaml | yq ".entries[\"${chartname}\"][]")
+        printf '%s\n' \
+            "##### $chartname:$(yq ".entries[\"${chartname}\"][].version" index.yaml)" \
+            '> [!NOTE]' \
+            "> $(yq ".entries[\"${chartname}\"][].description" index.yaml)" \
+            '   ' \
+            '```yaml' \
+            "$contents" \
+            '```' >> README.md
+    done
+}
+
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 cd $SCRIPT_DIR/../charts
 
@@ -38,30 +53,15 @@ categories=($(cat index.yaml | yq ".entries[][].annotations.category" | sort | u
 #charts=($(cat index.yaml | yq '.entries | keys[]'))
 for category in "${categories[@]}"; do
     if [ $category != 'null' ]; then
-        charts=($(yq -r ".entries | to_entries[] | select(.value[].annotations.category == \"$category\") | .key" index.yaml))
-        #charts=($(yq -r '.entries | to_entries[] | select(.value[].annotations.category == "'$category'") | .key' index.yaml))
         printf '%s\n' \
             "#### $category" >> README.md
-        for chartname in "${charts[@]}"; do
-            contents=$(cat index.yaml | yq ".entries[\"${chartname}\"][]")
-            printf '%s\n' \
-                "##### $chartname:$(yq ".entries[\"${chartname}\"][].version" index.yaml)" \
-                '```yaml' \
-                "$contents" \
-                '```' >> README.md
-        done
+        charts=($(yq -r ".entries | to_entries[] | select(.value[].annotations.category == \"$category\") | .key" index.yaml))
+        #charts=($(yq -r '.entries | to_entries[] | select(.value[].annotations.category == "'$category'") | .key' index.yaml))
     #null은 마지막으로 정렬됨
     else
         printf '%s\n' \
-            '#### Undefined' >> README.md
+            '#### Undefined Category' >> README.md
         charts=($(yq -r '.entries | to_entries[] | select(.value[].annotations | has("category") | not) | .key' index.yaml))
-        for chartname in "${charts[@]}"; do
-            contents=$(cat index.yaml | yq ".entries[\"${chartname}\"][]")
-            printf '%s\n' \
-                "##### $chartname:$(yq ".entries[\"${chartname}\"][].version" index.yaml)" \
-                '```yaml' \
-                "$contents" \
-                '```' >> README.md
-        done
     fi
+    writeContents "${charts[@]}"
 done

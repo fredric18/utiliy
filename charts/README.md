@@ -16,6 +16,9 @@ helm repo add fredric18 https://utils.fredric18.online/charts
 ### Chart List
 #### Analytics
 ##### fluentd:5.9.8
+> [!NOTE]
+> Fluentd collects events from various data sources and writes them to files, RDBMS, NoSQL, IaaS, SaaS, Hadoop and so on.
+   
 ```yaml
 annotations:
   category: Analytics
@@ -53,6 +56,9 @@ urls:
 version: 5.9.8
 ```
 ##### kibana:10.6.1
+> [!NOTE]
+> Kibana is an open source, browser based analytics and search dashboard for Elasticsearch. Kibana strives to be easy to get started with, while also being flexible and powerful.
+   
 ```yaml
 annotations:
   category: Analytics
@@ -93,6 +99,9 @@ version: 10.6.1
 ```
 #### CertificateAuthority
 ##### cert-manager:0.13.3
+> [!NOTE]
+> cert-manager is a Kubernetes add-on to automate the management and issuance of TLS certificates from various issuing sources.
+   
 ```yaml
 annotations:
   category: CertificateAuthority
@@ -136,6 +145,9 @@ version: 0.13.3
 ```
 #### Database
 ##### cassandra:10.12.1
+> [!NOTE]
+> Apache Cassandra is an open source distributed database management system designed to handle large amounts of data across many servers, providing high availability with no single point of failure.
+   
 ```yaml
 annotations:
   category: Database
@@ -175,6 +187,9 @@ urls:
 version: 10.12.1
 ```
 ##### mariadb:16.5.0
+> [!NOTE]
+> MariaDB is an open source, community-developed SQL database server that is widely in use around the world due to its enterprise features, flexibility, and collaboration with leading tech firms.
+   
 ```yaml
 annotations:
   category: Database
@@ -216,6 +231,9 @@ urls:
 version: 16.5.0
 ```
 ##### postgresql:13.2.23
+> [!NOTE]
+> PostgreSQL (Postgres) is an open source object-relational database known for reliability and data integrity. ACID-compliant, it supports foreign keys, joins, views, triggers and stored procedures.
+   
 ```yaml
 annotations:
   category: Database
@@ -258,6 +276,9 @@ urls:
 version: 13.2.23
 ```
 ##### redis:19.0.1
+> [!NOTE]
+> Redis(R) is an open source, advanced key-value store. It is often referred to as a data structure server since keys can contain strings, hashes, lists, sets and sorted sets.
+   
 ```yaml
 annotations:
   category: Database
@@ -302,6 +323,9 @@ version: 19.0.1
 ```
 #### DeveloperTools
 ##### keycloak:17.3.1
+> [!NOTE]
+> Keycloak is a high performance Java-based identity and access management solution. It lets developers add an authentication layer to their applications with minimum effort.
+   
 ```yaml
 annotations:
   category: DeveloperTools
@@ -342,6 +366,9 @@ urls:
 version: 17.3.1
 ```
 ##### sonarqube:4.1.1
+> [!NOTE]
+> SonarQube(TM) is an open source quality management platform that analyzes and measures code's technical quality. It enables developers to detect code issues, vulnerabilities, and bugs in early stages.
+   
 ```yaml
 annotations:
   category: DeveloperTools
@@ -387,6 +414,9 @@ version: 4.1.1
 ```
 #### Infrastructure
 ##### apache:10.2.1
+> [!NOTE]
+> Apache HTTP Server is an open-source HTTP server. The goal of this project is to provide a secure, efficient and extensible server that provides HTTP services in sync with the current HTTP standards.
+   
 ```yaml
 annotations:
   category: Infrastructure
@@ -429,6 +459,9 @@ urls:
 version: 10.2.1
 ```
 ##### argo-cd:6.0.9
+> [!NOTE]
+> Argo CD is a continuous delivery tool for Kubernetes based on GitOps.
+   
 ```yaml
 annotations:
   category: Infrastructure
@@ -475,6 +508,9 @@ urls:
 version: 6.0.9
 ```
 ##### harbor:19.1.1
+> [!NOTE]
+> Harbor is an open source trusted cloud-native registry to store, sign, and scan content. It adds functionalities like security, identity, and management to the open source Docker distribution.
+   
 ```yaml
 annotations:
   category: Infrastructure
@@ -537,6 +573,9 @@ urls:
 version: 19.1.1
 ```
 ##### jenkins:12.4.2
+> [!NOTE]
+> Jenkins is an open source Continuous Integration and Continuous Delivery (CI/CD) server designed to automate the building, testing, and deploying of any software project.
+   
 ```yaml
 annotations:
   category: Infrastructure
@@ -579,6 +618,9 @@ urls:
 version: 12.4.2
 ```
 ##### kafka:26.4.0
+> [!NOTE]
+> Apache Kafka is a distributed streaming platform designed to build real-time pipelines and can be used as a message broker or as a replacement for a log aggregation solution for big data applications.
+   
 ```yaml
 annotations:
   category: Infrastructure
@@ -628,6 +670,9 @@ urls:
 version: 26.4.0
 ```
 ##### minio:12.9.4
+> [!NOTE]
+> MinIO(R) is an object storage server, compatible with Amazon S3 cloud storage service, mainly used for storing unstructured data (such as photos, videos, log files, etc.).
+   
 ```yaml
 annotations:
   category: Infrastructure
@@ -669,6 +714,9 @@ urls:
 version: 12.9.4
 ```
 ##### nginx-ingress-controller:10.7.0
+> [!NOTE]
+> NGINX Ingress Controller is an Ingress controller that manages external access to HTTP services in a Kubernetes cluster using NGINX.
+   
 ```yaml
 annotations:
   category: Infrastructure
@@ -711,6 +759,9 @@ version: 10.7.0
 ```
 #### MachineLearning
 ##### tensorflow-resnet:3.10.2
+> [!NOTE]
+> TensorFlow ResNet is a client utility for use with TensorFlow Serving and ResNet models.
+   
 ```yaml
 annotations:
   category: MachineLearning
@@ -752,6 +803,9 @@ version: 3.10.2
 ```
 #### WorkFlow
 ##### airflow:16.1.2
+> [!NOTE]
+> Apache Airflow is a tool to express and execute workflows as directed acyclic graphs (DAGs). It includes utilities to schedule tasks, monitor task progress and handle task dependencies.
+   
 ```yaml
 annotations:
   category: WorkFlow
@@ -805,8 +859,11 @@ urls:
   - airflow-16.1.2.tgz
 version: 16.1.2
 ```
-#### Undefined
+#### Undefined Category
 ##### docker-mailserver:3.0.10
+> [!NOTE]
+> A fullstack but simple mailserver (smtp, imap, antispam, antivirus, ssl...) using Docker.
+   
 ```yaml
 annotations:
   artifacthub.io/changes: |
@@ -835,6 +892,9 @@ urls:
 version: 3.0.10
 ```
 ##### kube-prometheus-stack:58.3.1
+> [!NOTE]
+> kube-prometheus-stack collects Kubernetes manifests, Grafana dashboards, and Prometheus rules combined with documentation and scripts to provide easy to operate end-to-end Kubernetes cluster monitoring with Prometheus using the Prometheus Operator.
+   
 ```yaml
 annotations:
   artifacthub.io/license: Apache-2.0
@@ -904,6 +964,9 @@ urls:
 version: 58.3.1
 ```
 ##### minecraft:4.15.0
+> [!NOTE]
+> Minecraft server
+   
 ```yaml
 annotations:
   artifacthub.io/links: |
@@ -937,6 +1000,9 @@ urls:
 version: 4.15.0
 ```
 ##### palworld:0.1.0
+> [!NOTE]
+> This chart will provide a Palworld server installation on a kubernetes cluster
+   
 ```yaml
 annotations:
   artifacthub.io/alternativeName: palworld-server
