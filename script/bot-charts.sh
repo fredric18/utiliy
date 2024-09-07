@@ -33,43 +33,8 @@ function writeCharts() {
             "$(yq ".entries[\"${chartname}\"][].description" index.yaml)" \
         >> README.md
 
-        ###### Images
-        images=($(yq ".entries[\"${chartname}\"][].annotations.images" index.yaml | yq ".[].image"))
-        array_length=${#images[@]}
-        for (( i=0; i<array_length; i++ )); do
-            if [ $i == 0 ]; then
-                printf '>>%s\n' \
-                    '   ' \
-                    '###### images' \
-                    '{: .no_toc}' \
-                >> README.md
-            fi
-            image=${images[$i]}
-            printf '>>>%s\n' \
-                "1. $image" \
-            >> README.md
-        done
 
-        ###### Dependencies
-        array_length=$(yq ".entries[\"${chartname}\"][].dependencies | length" index.yaml)
-        for (( i=0; i<array_length; i++ )); do
-            if [ $i == 0 ]; then
-                printf '>>%s\n' \
-                    '   ' \
-                    '###### dependencies' \
-                    '{: .no_toc}' \
-                >> README.md
-                printf '>>>%s\n' \
-                    'Name | Version | Repository' \
-                    '---|---|---' \
-                >> README.md
-            fi
-            printf '>>>%s\n' \
-                "$(yq ".entries[\"${chartname}\"][].dependencies[$i].name" index.yaml) | $(yq ".entries[\"${chartname}\"][].dependencies[$i].version" index.yaml) | $(yq ".entries[\"${chartname}\"][].dependencies[$i].repository" index.yaml)" \
-            >> README.md
-        done
-
-        ##### ### details 생성
+        ##### ChartName > ### details 생성
         mkdir -p "details/$chartfullname"
         contents=$(cat index.yaml | yq ".entries[\"${chartname}\"][]")
         printf '%s\n' \
