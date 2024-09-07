@@ -36,8 +36,9 @@ printf '%s\n' \
 
 categories=($(cat index.yaml | yq ".entries[][].annotations.category" | sort | uniq))
 #charts=($(cat index.yaml | yq '.entries | keys[]'))
-for category in "${categories[@]}; do
-    charts=($(yq -r '.entries | to_entries[] | select(.value[].annotations.category == "'$category'") | .key' index.yaml))
+for category in "${categories[@]}"; do
+	charts=($(yq -r ".entries | to_entries[] | select(.value[].annotations.category == \"$category\") | .key" index.yaml))
+    #charts=($(yq -r '.entries | to_entries[] | select(.value[].annotations.category == "'$category'") | .key' index.yaml))
     printf '%s\n' \
         "#### $category" >> README.md
     for chartname in "${charts[@]}"; do
