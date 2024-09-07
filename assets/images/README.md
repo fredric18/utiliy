@@ -1,6 +1,6 @@
 ---
 layout: page
 title: Assets
-permalink: /assets/
+permalink: /assets/images/
 ---
 #### assets
