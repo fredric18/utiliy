@@ -18,19 +18,16 @@ jobs:
   bot-jobs:
     runs-on: ubuntu-latest
     steps:
-    - name: Install Helm
-      run: |
-        curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash
     - name: Checkout
       uses: actions/checkout@v4
-    - name: Check for Updated Charts
-      run: |
-        chmod +x ./script/check-updated-chart.sh  # 실행 권한 부여
-        ./script/check-updated-chart.sh
     - name: Configure Git
       run: |
         git config user.name "myeong-han"
         git config user.email "myeong-han@users.noreply.github.com"
+    - name: Check for Updated Charts
+      run: |
+        chmod +x ./script/check-updated-chart.sh  # 실행 권한 부여
+        ./script/check-updated-chart.sh
     - name: Run `./script/bot-charts.sh`
       run: |
         chmod +x ./script/bot-charts.sh  # 실행 권한 부여
