@@ -16,15 +16,14 @@
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 cd $SCRIPT_DIR/../charts
 
-charts=($(cat index.yaml | yq '.entries | keys[]'))
 printf '%s\n' \
     '---' \
     'layout: page' \
     'title: Charts' \
     'permalink: /charts/' \
     '---' \
-	'### Table of Contents' \
-	'{: .no_toc }' \
+    '### Table of Contents' \
+    '{: .no_toc }' \
     '1. TOC' \
     '{:toc}' \
     '---' \
@@ -35,11 +34,18 @@ printf '%s\n' \
     '---' \
     '### Chart List' > README.md
 
-for chartname in "${charts[@]}"; do
-    contents=$(cat index.yaml | yq ".entries[\"${chartname}\"][]")
+categories=($(cat index.yaml | yq ".entries[][].annotations.category" | sort | uniq))
+#charts=($(cat index.yaml | yq '.entries | keys[]'))
+for category in "${categories[@]}; do
+    charts=($(yq -r '.entries | to_entries[] | select(.value[].annotations.category == "'$category'") | .key' index.yaml))
     printf '%s\n' \
-        "#### $chartname" \
-        '```yaml' \
-        "$contents" \
-        '```' >> README.md
+        "#### $category" \
+    for chartname in "${charts[@]}"; do
+        contents=$(cat index.yaml | yq ".entries[\"${chartname}\"][]")
+        printf '%s\n' \
+            "##### $chartname" \
+            '```yaml' \
+            "$contents" \
+            '```' >> README.md
+    done
 done

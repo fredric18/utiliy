@@ -16,8 +16,6 @@
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 cd $SCRIPT_DIR/../assets
 
-L1dirs=($(find . -type d -maxdepth 1 | tail -n$(expr $(find . -type d -maxdepth 1 | wc -l | sed 's/ //g') - 1) | sed 's/.\///g'))
-tree -L 1 --noreport | tail -n$(expr $(tree -L 1 --noreport | wc -l) - 1) | sed 's/[^a-zA-Z0-9._-]//g'
 printf '%s\n' \
     '---' \
     'layout: page' \
@@ -26,6 +24,8 @@ printf '%s\n' \
     '---' \
     '### Pages of Assets' > README.md
 
+L1dirs=($(find . -type d -maxdepth 1 | tail -n$(expr $(find . -type d -maxdepth 1 | wc -l | sed 's/ //g') - 1) | sed 's/.\///g'))
+#tree -L 1 --noreport | tail -n$(expr $(tree -L 1 --noreport | wc -l) - 1) | sed 's/[^a-zA-Z0-9._-]//g'
 for L1dir in "${L1dirs[@]}"; do
     if [ $L1dir != 'css' ]; then 
         printf '%s\n' \
@@ -38,10 +38,11 @@ for L1dir in "${L1dirs[@]}"; do
             "permalink: /assets/$L1dir" \
             '---' \
             "### Pages of $L1dir" > README.md
+
         L2dirs=($(find . -type d -maxdepth 1 | tail -n$(expr $(find . -type d -maxdepth 1 | wc -l | sed 's/ //g') - 1) | sed 's/.\///g'))
         for L2dir in "${L2dirs[@]}"; do
             printf '%s\n' \
-			    '   ' \
+                '   ' \
                 "#### $L2dir" >> README.md
             files=($(find $L2dir -type f))
             for file in "${files[@]}"; do
