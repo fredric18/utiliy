@@ -22,12 +22,12 @@ helm pull fredric18/airflow --untar --version=16.1.2
    
 #### images
 ```shell
-docker pull docker.io/bitnami/airflow-exporter:0.20220314.0-debian-11-r440
-docker pull docker.io/bitnami/airflow-scheduler:2.7.3-debian-11-r0
-docker pull docker.io/bitnami/airflow-worker:2.7.3-debian-11-r0
-docker pull docker.io/bitnami/airflow:2.7.3-debian-11-r0
-docker pull docker.io/bitnami/git:2.42.1-debian-11-r0
-docker pull docker.io/bitnami/os-shell:11-debian-11-r90
+docker pull 
+docker pull 
+docker pull 
+docker pull 
+docker pull 
+docker pull 
 ```
    
 #### dependencies

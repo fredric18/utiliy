@@ -22,8 +22,8 @@ helm pull fredric18/tensorflow-resnet --untar --version=3.10.2
    
 #### images
 ```shell
-docker pull docker.io/bitnami/tensorflow-resnet:2.14.0-debian-11-r0
-docker pull docker.io/bitnami/tensorflow-serving:2.14.0-debian-11-r0
+docker pull 
+docker pull 
 ```
    
 #### dependencies

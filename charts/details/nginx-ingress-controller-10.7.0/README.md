@@ -22,8 +22,8 @@ helm pull fredric18/nginx-ingress-controller --untar --version=10.7.0
    
 #### images
 ```shell
-docker pull docker.io/bitnami/nginx:1.25.4-debian-12-r2
-docker pull docker.io/bitnami/nginx-ingress-controller:1.9.6-debian-12-r8
+docker pull 
+docker pull 
 ```
    
 #### dependencies

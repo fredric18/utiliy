@@ -22,8 +22,8 @@ helm pull fredric18/kibana --untar --version=10.6.1
    
 #### images
 ```shell
-docker pull docker.io/bitnami/kibana:8.10.4-debian-11-r0
-docker pull docker.io/bitnami/os-shell:11-debian-11-r90
+docker pull 
+docker pull 
 ```
    
 #### dependencies

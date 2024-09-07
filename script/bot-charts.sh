@@ -15,9 +15,9 @@
 
 function writeCharts() {
     local charts=("$@")
-    local array_length=${#charts[@]}
-    for (( i=0; i<array_length; i++ )); do
-        chartname=${charts[$i]}
+    local charts_length=${#charts[@]}
+    for (( j=0; j<charts_length; j++ )); do
+        chartname=${charts[$j]}
         ##### ChartName
         local chartVersion=$(yq ".entries[\"${chartname}\"][].version" index.yaml)
         local chartfullname=$chartname-$chartVersion
@@ -26,7 +26,7 @@ function writeCharts() {
             "##### [$chartfullname](/charts/details/$chartfullname)" \
         >> README.md
 
-        if [ "$chartname" != "${charts[$(expr $i + 1)]}" ]; then
+        if [ "$chartname" != "${charts[$(expr $j + 1)]}" ]; then
             ###### Description
              printf '>>%s\n' \
                 '###### description' \
@@ -72,19 +72,19 @@ function writeCharts() {
         ##### #### Images
         images=($(yq ".entries[\"${chartname}\"][].annotations.images" index.yaml | yq ".[].image"))
         array_length=${#images[@]}
-        for (( i=0; i<array_length; i++ )); do
-            if [ $i == 0 ]; then
+        for (( k=0; k<array_length; k++ )); do
+            if [ $k == 0 ]; then
                 printf '%s\n' \
                     '   ' \
                     '#### images' \
                     '```shell' \
                 >> details/$chartfullname/README.md
             fi
-            image=${images[$i]}
+            image=${images[$k]}
             printf '%s\n' \
-                "docker pull $image" \
+                "docker pull $kmage" \
             >> details/$chartfullname/README.md
-            if [ $i == $(expr $array_length - 1) ]; then
+            if [ $k == $(expr $array_length - 1) ]; then
                 printf '%s\n' \
                     '```' \
                 >> details/$chartfullname/README.md
@@ -93,8 +93,8 @@ function writeCharts() {
 
         ##### #### Dependencies
         array_length=$(yq ".entries[\"${chartname}\"][].dependencies | length" index.yaml)
-        for (( i=0; i<array_length; i++ )); do
-            if [ $i == 0 ]; then
+        for (( k=0; k<array_length; k++ )); do
+            if [ $k == 0 ]; then
                 printf '%s\n' \
                     '   ' \
                     '#### dependencies' \
@@ -105,7 +105,7 @@ function writeCharts() {
                 >> details/$chartfullname/README.md
             fi
             printf '>%s\n' \
-                "$(yq ".entries[\"${chartname}\"][].dependencies[$i].name" index.yaml) | $(yq ".entries[\"${chartname}\"][].dependencies[$i].version" index.yaml) | $(yq ".entries[\"${chartname}\"][].dependencies[$i].repository" index.yaml)" \
+                "$(yq ".entries[\"${chartname}\"][].dependencies[$k].name" index.yaml) | $(yq ".entries[\"${chartname}\"][].dependencies[$k].version" index.yaml) | $(yq ".entries[\"${chartname}\"][].dependencies[$k].repository" index.yaml)" \
             >> details/$chartfullname/README.md
         done
         printf '%s\n' \

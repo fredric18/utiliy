@@ -22,9 +22,9 @@ helm pull fredric18/sonarqube --untar --version=4.1.1
    
 #### images
 ```shell
-docker pull docker.io/bitnami/jmx-exporter:0.20.0-debian-11-r0
-docker pull docker.io/bitnami/os-shell:11-debian-11-r90
-docker pull docker.io/bitnami/sonarqube:10.2.1-debian-11-r10
+docker pull 
+docker pull 
+docker pull 
 ```
    
 #### dependencies

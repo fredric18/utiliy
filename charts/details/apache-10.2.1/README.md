@@ -22,9 +22,9 @@ helm pull fredric18/apache --untar --version=10.2.1
    
 #### images
 ```shell
-docker pull docker.io/bitnami/apache-exporter:1.0.3-debian-11-r0
-docker pull docker.io/bitnami/apache:2.4.58-debian-11-r0
-docker pull docker.io/bitnami/git:2.42.1-debian-11-r0
+docker pull 
+docker pull 
+docker pull 
 ```
    
 #### dependencies

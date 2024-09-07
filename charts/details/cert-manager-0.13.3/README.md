@@ -22,10 +22,10 @@ helm pull fredric18/cert-manager --untar --version=0.13.3
    
 #### images
 ```shell
-docker pull docker.io/bitnami/acmesolver:1.13.2-debian-11-r1
-docker pull docker.io/bitnami/cainjector:1.13.2-debian-11-r1
-docker pull docker.io/bitnami/cert-manager-webhook:1.13.2-debian-11-r1
-docker pull docker.io/bitnami/cert-manager:1.13.2-debian-11-r1
+docker pull 
+docker pull 
+docker pull 
+docker pull 
 ```
    
 #### dependencies

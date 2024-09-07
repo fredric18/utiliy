@@ -22,9 +22,9 @@ helm pull fredric18/cassandra --untar --version=10.12.1
    
 #### images
 ```shell
-docker pull docker.io/bitnami/cassandra:4.1.4-debian-12-r4
-docker pull docker.io/bitnami/cassandra-exporter:2.3.8-debian-12-r17
-docker pull docker.io/bitnami/os-shell:12-debian-12-r16
+docker pull 
+docker pull 
+docker pull 
 ```
    
 #### dependencies

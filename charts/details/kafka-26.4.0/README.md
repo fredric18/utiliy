@@ -22,11 +22,11 @@ helm pull fredric18/kafka --untar --version=26.4.0
    
 #### images
 ```shell
-docker pull docker.io/bitnami/jmx-exporter:0.20.0-debian-11-r0
-docker pull docker.io/bitnami/kafka-exporter:1.7.0-debian-11-r132
-docker pull docker.io/bitnami/kafka:3.6.0-debian-11-r1
-docker pull docker.io/bitnami/kubectl:1.28.3-debian-11-r0
-docker pull docker.io/bitnami/os-shell:11-debian-11-r90
+docker pull 
+docker pull 
+docker pull 
+docker pull 
+docker pull 
 ```
    
 #### dependencies

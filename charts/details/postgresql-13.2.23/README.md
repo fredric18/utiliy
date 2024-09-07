@@ -22,9 +22,9 @@ helm pull fredric18/postgresql --untar --version=13.2.23
    
 #### images
 ```shell
-docker pull docker.io/bitnami/os-shell:11-debian-11-r91
-docker pull docker.io/bitnami/postgres-exporter:0.15.0-debian-11-r2
-docker pull docker.io/bitnami/postgresql:16.1.0-debian-11-r15
+docker pull 
+docker pull 
+docker pull 
 ```
    
 #### dependencies

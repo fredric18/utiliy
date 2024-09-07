@@ -22,11 +22,11 @@ helm pull fredric18/redis --untar --version=19.0.1
    
 #### images
 ```shell
-docker pull docker.io/bitnami/kubectl:1.29.2-debian-12-r3
-docker pull docker.io/bitnami/os-shell:12-debian-12-r16
-docker pull docker.io/bitnami/redis:7.2.4-debian-12-r9
-docker pull docker.io/bitnami/redis-exporter:1.58.0-debian-12-r4
-docker pull docker.io/bitnami/redis-sentinel:7.2.4-debian-12-r7
+docker pull 
+docker pull 
+docker pull 
+docker pull 
+docker pull 
 ```
    
 #### dependencies

@@ -22,10 +22,10 @@ helm pull fredric18/argo-cd --untar --version=6.0.9
    
 #### images
 ```shell
-docker pull docker.io/bitnami/argo-cd:2.10.6-debian-12-r2
-docker pull docker.io/bitnami/dex:2.39.1-debian-12-r0
-docker pull docker.io/bitnami/os-shell:12-debian-12-r18
-docker pull docker.io/bitnami/redis:7.2.4-debian-12-r11
+docker pull 
+docker pull 
+docker pull 
+docker pull 
 ```
    
 #### dependencies

@@ -22,16 +22,16 @@ helm pull fredric18/harbor --untar --version=19.1.1
    
 #### images
 ```shell
-docker pull docker.io/bitnami/harbor-adapter-trivy:2.9.1-debian-11-r0
-docker pull docker.io/bitnami/harbor-core:2.9.1-debian-11-r1
-docker pull docker.io/bitnami/harbor-exporter:2.9.1-debian-11-r1
-docker pull docker.io/bitnami/harbor-jobservice:2.9.1-debian-11-r1
-docker pull docker.io/bitnami/harbor-registry:2.9.1-debian-11-r1
-docker pull docker.io/bitnami/harbor-registryctl:2.9.1-debian-11-r1
-docker pull docker.io/bitnami/harbor-portal:2.9.1-debian-11-r0
-docker pull docker.io/bitnami/nginx:1.25.3-debian-11-r1
-docker pull docker.io/bitnami/os-shell:11-debian-11-r91
-docker pull docker.io/bitnami/postgresql:13.13.0-debian-11-r0
+docker pull 
+docker pull 
+docker pull 
+docker pull 
+docker pull 
+docker pull 
+docker pull 
+docker pull 
+docker pull 
+docker pull 
 ```
    
 #### dependencies

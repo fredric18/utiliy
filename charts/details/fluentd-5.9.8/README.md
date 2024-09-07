@@ -22,7 +22,7 @@ helm pull fredric18/fluentd --untar --version=5.9.8
    
 #### images
 ```shell
-docker pull docker.io/bitnami/fluentd:1.16.2-debian-11-r80
+docker pull 
 ```
    
 #### dependencies

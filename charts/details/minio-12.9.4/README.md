@@ -22,9 +22,9 @@ helm pull fredric18/minio --untar --version=12.9.4
    
 #### images
 ```shell
-docker pull docker.io/bitnami/minio-client:2023.11.6-debian-11-r1
-docker pull docker.io/bitnami/minio:2023.11.11-debian-11-r0
-docker pull docker.io/bitnami/os-shell:11-debian-11-r91
+docker pull 
+docker pull 
+docker pull 
 ```
    
 #### dependencies

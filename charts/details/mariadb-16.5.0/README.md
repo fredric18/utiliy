@@ -22,9 +22,9 @@ helm pull fredric18/mariadb --untar --version=16.5.0
    
 #### images
 ```shell
-docker pull docker.io/bitnami/mariadb:11.2.3-debian-12-r4
-docker pull docker.io/bitnami/mysqld-exporter:0.15.1-debian-12-r8
-docker pull docker.io/bitnami/os-shell:12-debian-12-r16
+docker pull 
+docker pull 
+docker pull 
 ```
    
 #### dependencies

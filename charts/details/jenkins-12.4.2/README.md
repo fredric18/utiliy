@@ -22,9 +22,9 @@ helm pull fredric18/jenkins --untar --version=12.4.2
    
 #### images
 ```shell
-docker pull docker.io/bitnami/jenkins-agent:0.3192.0-debian-11-r0
-docker pull docker.io/bitnami/jenkins:2.414.3-debian-11-r1
-docker pull docker.io/bitnami/os-shell:11-debian-11-r90
+docker pull 
+docker pull 
+docker pull 
 ```
    
 #### dependencies

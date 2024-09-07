@@ -22,8 +22,8 @@ helm pull fredric18/keycloak --untar --version=17.3.1
    
 #### images
 ```shell
-docker pull docker.io/bitnami/keycloak-config-cli:5.9.0-debian-11-r0
-docker pull docker.io/bitnami/keycloak:22.0.5-debian-11-r0
+docker pull 
+docker pull 
 ```
    
 #### dependencies
