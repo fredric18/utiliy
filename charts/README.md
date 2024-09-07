@@ -3,6 +3,7 @@ layout: page
 title: Charts
 permalink: /charts/
 ---
+### Table of Contents
 1. TOC
 {:toc}
 ---
