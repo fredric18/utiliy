@@ -24,6 +24,7 @@ printf '%s\n' \
     'permalink: /charts/' \
     '---' \
 	'### Table of Contents' \
+	'{: .no_toc }' \
     '1. TOC' \
     '{:toc}' \
     '---' \
