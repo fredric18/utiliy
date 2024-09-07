@@ -805,4 +805,176 @@ urls:
   - airflow-16.1.2.tgz
 version: 16.1.2
 ```
-#### null
+#### Undefined
+##### docker-mailserver
+```yaml
+annotations:
+  artifacthub.io/changes: |
+    - Breaking : Standardized app labels to app.kubernetes.io/name for Istio workload/Cilium compatibility
+apiVersion: v2
+appVersion: 13.3.1
+created: "2024-09-06T03:45:34.656879665Z"
+description: A fullstack but simple mailserver (smtp, imap, antispam, antivirus, ssl...) using Docker.
+digest: 9ee8d8be62f2c565e581e6a1f8162447d17eff5fa6abc8993f8e3a5bb7398167
+home: https://github.com/funkypenguin/helm-docker-mailserver
+icon: https://avatars.githubusercontent.com/u/76868633?s=400&v=4
+keywords:
+  - mailserver
+  - postfix
+  - dovecot
+  - amavis
+  - imap
+maintainers:
+  - email: davidy@funkypenguin.co.nz
+    name: funkypenguin
+name: docker-mailserver
+sources:
+  - https://github.com/docker-mailserver/docker-mailserver-helm
+urls:
+  - docker-mailserver-3.0.10.tgz
+version: 3.0.10
+```
+##### kube-prometheus-stack
+```yaml
+annotations:
+  artifacthub.io/license: Apache-2.0
+  artifacthub.io/links: |
+    - name: Chart Source
+      url: https://github.com/prometheus-community/helm-charts
+    - name: Upstream Project
+      url: https://github.com/prometheus-operator/kube-prometheus
+  artifacthub.io/operator: "true"
+apiVersion: v2
+appVersion: v0.73.2
+created: "2024-09-06T03:45:34.733131647Z"
+dependencies:
+  - condition: crds.enabled
+    name: crds
+    repository: ""
+    version: 0.0.0
+  - condition: kubeStateMetrics.enabled
+    name: kube-state-metrics
+    repository: https://prometheus-community.github.io/helm-charts
+    version: 5.19.*
+  - condition: nodeExporter.enabled
+    name: prometheus-node-exporter
+    repository: https://prometheus-community.github.io/helm-charts
+    version: 4.33.*
+  - condition: grafana.enabled
+    name: grafana
+    repository: https://grafana.github.io/helm-charts
+    version: 7.3.*
+  - condition: windowsMonitoring.enabled
+    name: prometheus-windows-exporter
+    repository: https://prometheus-community.github.io/helm-charts
+    version: 0.3.*
+description: kube-prometheus-stack collects Kubernetes manifests, Grafana dashboards, and Prometheus rules combined with documentation and scripts to provide easy to operate end-to-end Kubernetes cluster monitoring with Prometheus using the Prometheus Operator.
+digest: ce08dd64dc8c23c7de6b151f45c544b981a60782cfd7564d72ab7bb62c3c2f2f
+home: https://github.com/prometheus-operator/kube-prometheus
+icon: https://raw.githubusercontent.com/prometheus/prometheus.github.io/master/assets/prometheus_logo-cb55bb5c346.png
+keywords:
+  - operator
+  - prometheus
+  - kube-prometheus
+kubeVersion: '>=1.19.0-0'
+maintainers:
+  - email: andrew@quadcorps.co.uk
+    name: andrewgkew
+  - email: gianrubio@gmail.com
+    name: gianrubio
+  - email: github.gkarthiks@gmail.com
+    name: gkarthiks
+  - email: kube-prometheus-stack@sisti.pt
+    name: GMartinez-Sisti
+  - email: github@jkroepke.de
+    name: jkroepke
+  - email: scott@r6by.com
+    name: scottrigby
+  - email: miroslav.hadzhiev@gmail.com
+    name: Xtigyro
+  - email: quentin.bisson@gmail.com
+    name: QuentinBisson
+name: kube-prometheus-stack
+sources:
+  - https://github.com/prometheus-community/helm-charts
+  - https://github.com/prometheus-operator/kube-prometheus
+type: application
+urls:
+  - kube-prometheus-stack-58.3.1.tgz
+version: 58.3.1
+```
+##### minecraft
+```yaml
+annotations:
+  artifacthub.io/links: |
+    - name: Image source
+      url: https://github.com/itzg/docker-minecraft-server
+    - name: Image DockerHub
+      url: https://hub.docker.com/r/itzg/minecraft-server
+apiVersion: v1
+appVersion: SeeValues
+created: "2024-09-06T03:45:34.737463379Z"
+description: Minecraft server
+digest: d358dafacd637743abdb057318773e44fbf13edb8f4e606d7c204a92d0dedad9
+home: https://minecraft.net/
+keywords:
+  - game
+  - server
+maintainers:
+  - email: gtaylor@gc-taylor.com
+    name: gtaylor
+  - email: jeff@billimek.com
+    name: billimek
+  - email: itzgeoff@gmail.com
+    name: itzg
+  - email: yannik@carbongem.com
+    name: bibz87
+name: minecraft
+sources:
+  - https://github.com/itzg/minecraft-server-charts
+urls:
+  - minecraft-4.15.0.tgz
+version: 4.15.0
+```
+##### palworld
+```yaml
+annotations:
+  artifacthub.io/alternativeName: palworld-server
+  artifacthub.io/images: |
+    - name: palworld-server-docker
+      image: thijsvanloef/palworld-server-docker:latest
+  artifacthub.io/license: MIT
+  artifacthub.io/links: |
+    - name: Chart source
+      url: https://github.com/thijsvanloef/palworld-server-docker/tree/main/charts/palworld
+    - name: Docker image source
+      url: https://github.com/thijsvanloef/palworld-server-docker
+  artifacthub.io/screenshots: |
+    - title: PalWorld
+      url: https://cdn.akamai.steamstatic.com/steam/apps/1623730/header.jpg
+apiVersion: v2
+appVersion: latest
+created: "2024-09-06T03:45:34.744891763Z"
+description: This chart will provide a Palworld server installation on a kubernetes cluster
+digest: 8e2af0fabaf42c4f63650cf252a00e594afe54639e92f3f0578562bad1c7c017
+home: https://github.com/thijsvanloef/palworld-server-docker
+icon: https://cdn.akamai.steamstatic.com/steam/apps/1623730/header.jpg
+keywords:
+  - palworld
+  - server
+  - kubernetes
+  - helm
+maintainers:
+  - email: filipe.souza@mestre8d.com
+    name: Filipe Souza
+    url: https://github.com/Filipe-Souza
+  - name: Twinki
+    url: https://github.com/Twinki14
+name: palworld
+sources:
+  - https://github.com/thijsvanloef/palworld-server-docker
+type: application
+urls:
+  - palworld-0.1.0.tgz
+version: 0.1.0
+```
