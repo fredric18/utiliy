@@ -18,7 +18,7 @@ function writeCharts() {
     for chartname in "${charts[@]}"; do
         ##### ChartName
         local chartVersion=$(yq ".entries[\"${chartname}\"][].version" index.yaml)
-        local chartfullname=$chartname:$chartVersion
+        local chartfullname=$chartname-$chartVersion
         printf '>%s\n' \
             '   ' \
             "##### [$chartfullname](/charts/details/$chartfullname)" \
