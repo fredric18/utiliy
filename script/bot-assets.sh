@@ -23,7 +23,6 @@ printf '%s\n' \
     'title: Assets' \
     'permalink: /assets/' \
     '---' \
-	'test' \
     '### Pages' > README.md
 
 for page in "${pages[@]}"; do
