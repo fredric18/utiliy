@@ -15,7 +15,7 @@ helm repo add fredric18 https://utils.fredric18.online/charts
 ---
 ### Chart List
 #### Analytics
-##### fluentd
+##### fluentd:5.9.8
 ```yaml
 annotations:
   category: Analytics
@@ -52,7 +52,7 @@ urls:
   - fluentd-5.9.8.tgz
 version: 5.9.8
 ```
-##### kibana
+##### kibana:10.6.1
 ```yaml
 annotations:
   category: Analytics
@@ -92,7 +92,7 @@ urls:
 version: 10.6.1
 ```
 #### CertificateAuthority
-##### cert-manager
+##### cert-manager:0.13.3
 ```yaml
 annotations:
   category: CertificateAuthority
@@ -135,7 +135,7 @@ urls:
 version: 0.13.3
 ```
 #### Database
-##### cassandra
+##### cassandra:10.12.1
 ```yaml
 annotations:
   category: Database
@@ -174,7 +174,7 @@ urls:
   - cassandra-10.12.1.tgz
 version: 10.12.1
 ```
-##### mariadb
+##### mariadb:16.5.0
 ```yaml
 annotations:
   category: Database
@@ -215,7 +215,7 @@ urls:
   - mariadb-16.5.0.tgz
 version: 16.5.0
 ```
-##### postgresql
+##### postgresql:13.2.23
 ```yaml
 annotations:
   category: Database
@@ -257,7 +257,7 @@ urls:
   - postgresql-13.2.23.tgz
 version: 13.2.23
 ```
-##### redis
+##### redis:19.0.1
 ```yaml
 annotations:
   category: Database
@@ -301,7 +301,7 @@ urls:
 version: 19.0.1
 ```
 #### DeveloperTools
-##### keycloak
+##### keycloak:17.3.1
 ```yaml
 annotations:
   category: DeveloperTools
@@ -341,7 +341,7 @@ urls:
   - keycloak-17.3.1.tgz
 version: 17.3.1
 ```
-##### sonarqube
+##### sonarqube:4.1.1
 ```yaml
 annotations:
   category: DeveloperTools
@@ -386,7 +386,7 @@ urls:
 version: 4.1.1
 ```
 #### Infrastructure
-##### apache
+##### apache:10.2.1
 ```yaml
 annotations:
   category: Infrastructure
@@ -428,7 +428,7 @@ urls:
   - apache-10.2.1.tgz
 version: 10.2.1
 ```
-##### argo-cd
+##### argo-cd:6.0.9
 ```yaml
 annotations:
   category: Infrastructure
@@ -474,7 +474,7 @@ urls:
   - argo-cd-6.0.9.tgz
 version: 6.0.9
 ```
-##### harbor
+##### harbor:19.1.1
 ```yaml
 annotations:
   category: Infrastructure
@@ -536,7 +536,7 @@ urls:
   - harbor-19.1.1.tgz
 version: 19.1.1
 ```
-##### jenkins
+##### jenkins:12.4.2
 ```yaml
 annotations:
   category: Infrastructure
@@ -578,7 +578,7 @@ urls:
   - jenkins-12.4.2.tgz
 version: 12.4.2
 ```
-##### kafka
+##### kafka:26.4.0
 ```yaml
 annotations:
   category: Infrastructure
@@ -627,7 +627,7 @@ urls:
   - kafka-26.4.0.tgz
 version: 26.4.0
 ```
-##### minio
+##### minio:12.9.4
 ```yaml
 annotations:
   category: Infrastructure
@@ -668,7 +668,7 @@ urls:
   - minio-12.9.4.tgz
 version: 12.9.4
 ```
-##### nginx-ingress-controller
+##### nginx-ingress-controller:10.7.0
 ```yaml
 annotations:
   category: Infrastructure
@@ -710,7 +710,7 @@ urls:
 version: 10.7.0
 ```
 #### MachineLearning
-##### tensorflow-resnet
+##### tensorflow-resnet:3.10.2
 ```yaml
 annotations:
   category: MachineLearning
@@ -751,7 +751,7 @@ urls:
 version: 3.10.2
 ```
 #### WorkFlow
-##### airflow
+##### airflow:16.1.2
 ```yaml
 annotations:
   category: WorkFlow
@@ -806,7 +806,7 @@ urls:
 version: 16.1.2
 ```
 #### Undefined
-##### docker-mailserver
+##### docker-mailserver:3.0.10
 ```yaml
 annotations:
   artifacthub.io/changes: |
@@ -834,7 +834,7 @@ urls:
   - docker-mailserver-3.0.10.tgz
 version: 3.0.10
 ```
-##### kube-prometheus-stack
+##### kube-prometheus-stack:58.3.1
 ```yaml
 annotations:
   artifacthub.io/license: Apache-2.0
@@ -903,7 +903,7 @@ urls:
   - kube-prometheus-stack-58.3.1.tgz
 version: 58.3.1
 ```
-##### minecraft
+##### minecraft:4.15.0
 ```yaml
 annotations:
   artifacthub.io/links: |
@@ -936,7 +936,7 @@ urls:
   - minecraft-4.15.0.tgz
 version: 4.15.0
 ```
-##### palworld
+##### palworld:0.1.0
 ```yaml
 annotations:
   artifacthub.io/alternativeName: palworld-server
