@@ -27,7 +27,7 @@ annotations:
     - Breaking : Standardized app labels to app.kubernetes.io/name for Istio workload/Cilium compatibility
 apiVersion: v2
 appVersion: 13.3.1
-created: "2024-09-06T03:45:34.656879665Z"
+created: "2024-09-08T05:08:58.32430994Z"
 description: A fullstack but simple mailserver (smtp, imap, antispam, antivirus, ssl...) using Docker.
 digest: 9ee8d8be62f2c565e581e6a1f8162447d17eff5fa6abc8993f8e3a5bb7398167
 home: https://github.com/funkypenguin/helm-docker-mailserver

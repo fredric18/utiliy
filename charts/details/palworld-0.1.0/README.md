@@ -38,7 +38,7 @@ annotations:
       url: https://cdn.akamai.steamstatic.com/steam/apps/1623730/header.jpg
 apiVersion: v2
 appVersion: latest
-created: "2024-09-06T03:45:34.744891763Z"
+created: "2024-09-08T05:08:58.449870433Z"
 description: This chart will provide a Palworld server installation on a kubernetes cluster
 digest: 8e2af0fabaf42c4f63650cf252a00e594afe54639e92f3f0578562bad1c7c017
 home: https://github.com/thijsvanloef/palworld-server-docker

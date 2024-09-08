@@ -53,7 +53,7 @@ annotations:
   licenses: Apache-2.0
 apiVersion: v2
 appVersion: 3.6.0
-created: "2024-09-06T03:45:34.699663968Z"
+created: "2024-09-08T05:08:58.38458132Z"
 dependencies:
   - condition: zookeeper.enabled
     name: zookeeper

@@ -1,8 +1,9 @@
-name: [old] Build and Deploy Jekyll Site
+name: Develop Jobs
 
 on:
   push:
-    branches: []
+    branches:
+      - develop
 
 permissions:
   contents: write
@@ -60,37 +61,3 @@ jobs:
         git push origin develop
         echo "${{ secrets.GITHUB_TOKEN }}" | gh auth login --with-token
         gh pr create --base main --head develop --title "[Actions/bot] Latest changes released from the develop branch" --body "### diffs\n$(git diff origin/main | grep '')"
-    - name: Upload repo artifact
-      uses: actions/upload-artifact@v4
-      with:
-        name: updated-repo
-        path: .  # Store the entire repository
-
-  build:
-    runs-on: ubuntu-latest
-    needs: bot-jobs
-    steps:
-    - name: Download repo artifact
-      uses: actions/download-artifact@v4
-      with:
-        name: updated-repo
-    - name: Setup Pages
-      uses: actions/configure-pages@v5
-    - name: Build with Jekyll
-      uses: actions/jekyll-build-pages@v1
-      with:
-        source: ./
-        destination: ./_site
-    - name: Upload artifact
-      uses: actions/upload-pages-artifact@v3
-
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-    - name: Deploy to GitHub Pages
-      id: deployment
-      uses: actions/deploy-pages@v4
