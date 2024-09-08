@@ -35,7 +35,7 @@ jobs:
     - name: Commit charts changes
       run: |
         git add -A
-        git commit -m "[Action/bot] update charts/README.md" || echo "No changes to commit"
+        git commit -m "[Actions/bot] update charts/README.md" || echo "No changes to commit"
     - name: Run `./script/bot-assets.sh`
       run: |
         chmod +x ./script/bot-assets.sh  # 실행 권한 부여
@@ -43,7 +43,7 @@ jobs:
     - name: Commit assets changes
       run: |
         git add -A
-        git commit -m "[Action/bot] update assets/README.md" || echo "No changes to commit"
+        git commit -m "[Actions/bot] update assets/README.md" || echo "No changes to commit"
     - name: Push changes
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -51,7 +51,7 @@ jobs:
         git push origin develop
         git fetch origin
         git checkout -b temp-merge-branch origin/main
-        git merge origin/develop --allow-unrelated-histories
+		git merge origin/develop -m "[Actions/bot] merge from develop barnch"
         git push origin temp-merge-branch:main
     - name: Upload repo artifact
       uses: actions/upload-artifact@v4
