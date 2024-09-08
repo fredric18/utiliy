@@ -26,8 +26,17 @@ jobs:
         git config user.email "myeong-han@users.noreply.github.com"
     - name: Check for Updated Charts
       run: |
-        chmod +x ./script/check-updated-chart.sh  # 실행 권한 부여
-        ./script/check-updated-chart.sh
+        SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+        cd $SCRIPT_DIR/../charts
+        git fetch origin
+        FLAG=$(git diff --name-only origin/main | grep '.tgz' | grep '/' | cut -d '/' -f 1 | sort | uniq)
+        if [ "$FLAG" == "charts" ]; then
+           curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash
+           helm package .
+           echo "Changes are detected and the helm chart is updated."
+        else
+           echo "No changes detected"
+        fi
     - name: Run `./script/bot-charts.sh`
       run: |
         chmod +x ./script/bot-charts.sh  # 실행 권한 부여
@@ -51,7 +60,7 @@ jobs:
         git push origin develop
         git fetch origin
         git checkout -b temp-merge-branch origin/main
-        git merge origin/develop -m "[Actions/bot] merge from develop barnch" --allow-unrelated-histories
+        git merge develop -m "[Actions/bot] merge from develop barnch" --allow-unrelated-histories
         git push origin temp-merge-branch:main
     - name: Upload repo artifact
       uses: actions/upload-artifact@v4
