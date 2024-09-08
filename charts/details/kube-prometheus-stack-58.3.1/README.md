@@ -41,7 +41,7 @@ annotations:
   artifacthub.io/operator: "true"
 apiVersion: v2
 appVersion: v0.73.2
-created: "2024-09-08T04:53:57.450294681Z"
+created: "2024-09-08T04:56:29.51218328Z"
 dependencies:
   - condition: crds.enabled
     name: crds
