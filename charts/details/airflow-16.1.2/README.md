@@ -57,7 +57,7 @@ annotations:
   licenses: Apache-2.0
 apiVersion: v2
 appVersion: 2.7.3
-created: "2024-09-08T04:39:03.812003455Z"
+created: "2024-09-08T04:51:05.921746471Z"
 dependencies:
   - condition: redis.enabled
     name: redis
