@@ -47,7 +47,7 @@ annotations:
   licenses: Apache-2.0
 apiVersion: v2
 appVersion: 10.2.1
-created: "2024-09-06T03:45:34.758800971Z"
+created: "2024-09-08T04:39:03.979507682Z"
 dependencies:
   - condition: postgresql.enabled
     name: postgresql

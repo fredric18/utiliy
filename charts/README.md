@@ -58,10 +58,13 @@ helm repo add fredric18 https://utils.fredric18.online/charts
    
 #### DeveloperTools
 >   
->##### [keycloak-17.3.1](/charts/details/keycloak-17.3.1)
+>##### [keycloak-22.2.1
+17.3.1](/charts/details/keycloak-22.2.1
+17.3.1)
 >>###### description
 >>{: .no_toc}
 >>>Keycloak is a high performance Java-based identity and access management solution. It lets developers add an authentication layer to their applications with minimum effort.
+Keycloak is a high performance Java-based identity and access management solution. It lets developers add an authentication layer to their applications with minimum effort.
 >   
 >##### [sonarqube-4.1.1](/charts/details/sonarqube-4.1.1)
 >>###### description
@@ -80,10 +83,13 @@ helm repo add fredric18 https://utils.fredric18.online/charts
 >>{: .no_toc}
 >>>Argo CD is a continuous delivery tool for Kubernetes based on GitOps.
 >   
->##### [harbor-19.1.1](/charts/details/harbor-19.1.1)
+>##### [harbor-23.0.2
+19.1.1](/charts/details/harbor-23.0.2
+19.1.1)
 >>###### description
 >>{: .no_toc}
 >>>Harbor is an open source trusted cloud-native registry to store, sign, and scan content. It adds functionalities like security, identity, and management to the open source Docker distribution.
+Harbor is an open source trusted cloud-native registry to store, sign, and scan content. It adds functionalities like security, identity, and management to the open source Docker distribution.
 >   
 >##### [jenkins-12.4.2](/charts/details/jenkins-12.4.2)
 >>###### description
