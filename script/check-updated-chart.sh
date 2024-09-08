@@ -15,6 +15,7 @@
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 cd $SCRIPT_DIR/../charts
+git fetch origin
 FLAG=$(git diff --name-only origin/main | grep '.tgz' | grep '/' | cut -d '/' -f 1 | sort | uniq)
 if [ "$FLAG" == "charts" ]; then
    curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash

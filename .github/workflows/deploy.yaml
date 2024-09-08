@@ -51,7 +51,7 @@ jobs:
         git push origin develop
         git fetch origin
         git checkout -b temp-merge-branch origin/main
-        git merge origin/develop -m "[Actions/bot] merge from develop barnch"
+        git merge origin/develop -m "[Actions/bot] merge from develop barnch" --allow-unrelated-histories
         git push origin temp-merge-branch:main
     - name: Upload repo artifact
       uses: actions/upload-artifact@v4
