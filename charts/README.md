@@ -127,10 +127,50 @@ Harbor is an open source trusted cloud-native registry to store, sign, and scan 
    
 #### Undefined Category
 >   
+>##### [aws-mountpoint-s3-csi-driver-1.5.1](/charts/details/aws-mountpoint-s3-csi-driver-1.5.1)
+>>###### description
+>>{: .no_toc}
+>>>A Helm chart for installing the Mountpoint for Amazon S3 CSI Driver. This CSI driver allows your Kubernetes applications to access S3 objects through a file system interface.
+>   
+>##### [base-1.21.0](/charts/details/base-1.21.0)
+>>###### description
+>>{: .no_toc}
+>>>Helm chart for deploying Istio cluster resources and CRDs
+>   
+>##### [chartmuseum-3.10.2](/charts/details/chartmuseum-3.10.2)
+>>###### description
+>>{: .no_toc}
+>>>Host your own Helm Chart Repository
+>   
 >##### [docker-mailserver-3.0.10](/charts/details/docker-mailserver-3.0.10)
 >>###### description
 >>{: .no_toc}
 >>>A fullstack but simple mailserver (smtp, imap, antispam, antivirus, ssl...) using Docker.
+>   
+>##### [gateway-1.21.0](/charts/details/gateway-1.21.0)
+>>###### description
+>>{: .no_toc}
+>>>Helm chart for deploying Istio gateways
+>   
+>##### [infisical-standalone-1.0.8](/charts/details/infisical-standalone-1.0.8)
+>>###### description
+>>{: .no_toc}
+>>>A helm chart for a full Infisical application
+>   
+>##### [istiod-1.21.0](/charts/details/istiod-1.21.0)
+>>###### description
+>>{: .no_toc}
+>>>Helm chart for istio control plane
+>   
+>##### [jaeger-operator-2.53.0](/charts/details/jaeger-operator-2.53.0)
+>>###### description
+>>{: .no_toc}
+>>>jaeger-operator Helm chart for Kubernetes
+>   
+>##### [kiali-server-1.82.0](/charts/details/kiali-server-1.82.0)
+>>###### description
+>>{: .no_toc}
+>>>Kiali is an open source project for service mesh observability, refer to https://www.kiali.io for details.
 >   
 >##### [kube-prometheus-stack-58.3.1](/charts/details/kube-prometheus-stack-58.3.1)
 >>###### description
@@ -141,6 +181,16 @@ Harbor is an open source trusted cloud-native registry to store, sign, and scan 
 >>###### description
 >>{: .no_toc}
 >>>Minecraft server
+>   
+>##### [nextcloud-5.5.4](/charts/details/nextcloud-5.5.4)
+>>###### description
+>>{: .no_toc}
+>>>A file sharing server that puts the control and security of your own data back into your hands.
+>   
+>##### [nexus-repository-manager-64.2.0](/charts/details/nexus-repository-manager-64.2.0)
+>>###### description
+>>{: .no_toc}
+>>>DEPRECATED Sonatype Nexus Repository Manager - Universal Binary repository
 >   
 >##### [palworld-0.1.0](/charts/details/palworld-0.1.0)
 >>###### description
