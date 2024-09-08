@@ -31,9 +31,9 @@ jobs:
         if [ "$FLAG" == "charts" ]; then
            curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash
            cd charts
-           helm package .
-           echo "Changes are detected and the helm chart is updated."
+           helm repo index .
            cd ..
+           echo "Changes are detected and the helm chart is updated."
         else
            echo "No changes detected"
         fi
