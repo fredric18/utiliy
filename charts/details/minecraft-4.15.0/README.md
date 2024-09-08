@@ -30,7 +30,7 @@ annotations:
       url: https://hub.docker.com/r/itzg/minecraft-server
 apiVersion: v1
 appVersion: SeeValues
-created: "2024-09-08T04:56:29.517099684Z"
+created: "2024-09-08T04:58:42.062517621Z"
 description: Minecraft server
 digest: d358dafacd637743abdb057318773e44fbf13edb8f4e606d7c204a92d0dedad9
 home: https://minecraft.net/
