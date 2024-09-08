@@ -60,4 +60,4 @@ jobs:
       run: |
         git push origin develop
         echo "${{ secrets.GITHUB_TOKEN }}" | gh auth login --with-token
-        gh pr create --base main --head develop --title "[Actions/bot] Latest changes released from the develop branch" --body "### diffs\n$(git diff origin/main | grep '')"
+        # gh pr create --base main --head develop --title "[Actions/bot] Latest changes released from the develop branch" --body "### diffs\n$(git diff origin/main | grep '')"

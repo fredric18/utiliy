@@ -118,6 +118,9 @@ function writeCharts() {
     done
 }
 
+
+#### Main ####
+
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 cd $SCRIPT_DIR/../charts
 
@@ -156,7 +159,7 @@ for category in "${categories[@]}"; do
             '   ' \
             '#### Undefined Category' \
         >> README.md
-        charts=($(yq -r '.entries | to_entries[] | select(.value[].annotations | has("category") | not) | .key' index.yaml))
+        charts=($(yq -r '.entries | to_entries[] | select((.value[] | has("annotations") | not) or (.value[].annotations | has("category") | not)) | .key' index.yaml))
     fi
     writeCharts "${charts[@]}"
 done
