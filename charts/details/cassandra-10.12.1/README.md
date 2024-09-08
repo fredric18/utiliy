@@ -46,7 +46,7 @@ annotations:
   licenses: Apache-2.0
 apiVersion: v2
 appVersion: 4.1.4
-created: "2024-09-08T04:51:05.940854571Z"
+created: "2024-09-08T04:53:57.336416688Z"
 dependencies:
   - name: common
     repository: oci://registry-1.docker.io/bitnamicharts
